@@ -87,6 +87,7 @@
 		45C4E32C163353A500D5C3D2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32B163353A500D5C3D2 /* AssetsLibrary.framework */; };
 		45C4E32E163353C100D5C3D2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32D163353C100D5C3D2 /* CoreVideo.framework */; };
 		45C4E330163353E400D5C3D2 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32F163353E400D5C3D2 /* libiconv.dylib */; };
+		45D38CCD16336EDA008E54EE /* BarcodeOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D38CCC16336EDA008E54EE /* BarcodeOverlay.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,7 @@
 		45C4E32B163353A500D5C3D2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		45C4E32D163353C100D5C3D2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		45C4E32F163353E400D5C3D2 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		45D38CCC16336EDA008E54EE /* BarcodeOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarcodeOverlay.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* PerfectBeauty-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PerfectBeauty-Info.plist"; path = "../PerfectBeauty-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +292,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				45D38CCC16336EDA008E54EE /* BarcodeOverlay.xib */,
 				30A0434214DC770100060A13 /* de.lproj */,
 				30A0434514DC770100060A13 /* se.lproj */,
 				1F766FDB13BBADB100FB74C0 /* en.lproj */,
@@ -610,6 +613,7 @@
 				45C4E3261633501400D5C3D2 /* index.html in Resources */,
 				45C4E3281633501400D5C3D2 /* README.md in Resources */,
 				45C4E3291633501400D5C3D2 /* rebuild-tests-json.py in Resources */,
+				45D38CCD16336EDA008E54EE /* BarcodeOverlay.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
