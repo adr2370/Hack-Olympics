@@ -46,6 +46,23 @@
 		45D164C91633353F0079F936 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D164B81633353F0079F936 /* MobileCoreServices.framework */; };
 		45D164CA1633353F0079F936 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D164B91633353F0079F936 /* CoreMedia.framework */; };
 		45D164CE163335B60079F936 /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45D164CD163335B60079F936 /* Cordova.plist */; };
+		45D16501163339F20079F936 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 45D164EC163339F20079F936 /* beep.wav */; };
+		45D16502163339F20079F936 /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45D164ED163339F20079F936 /* CHANGELOG.txt */; };
+		45D16503163339F20079F936 /* scanditsdk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45D164EF163339F20079F936 /* scanditsdk.strings */; };
+		45D16504163339F20079F936 /* empty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45D164F1163339F20079F936 /* empty.cpp */; };
+		45D16505163339F20079F936 /* scanditsdk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45D164F3163339F20079F936 /* scanditsdk.strings */; };
+		45D16506163339F20079F936 /* flashlight-turn-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D164F5163339F20079F936 /* flashlight-turn-off-icon.png */; };
+		45D16507163339F20079F936 /* flashlight-turn-off-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D164F6163339F20079F936 /* flashlight-turn-off-icon@2x.png */; };
+		45D16508163339F20079F936 /* flashlight-turn-on-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D164F7163339F20079F936 /* flashlight-turn-on-icon.png */; };
+		45D16509163339F20079F936 /* flashlight-turn-on-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D164F8163339F20079F936 /* flashlight-turn-on-icon@2x.png */; };
+		45D1650A163339F20079F936 /* libscanditsdk-iphone-2.2.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D164F9163339F20079F936 /* libscanditsdk-iphone-2.2.4.a */; };
+		45D1650B163339F20079F936 /* LICENSE-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45D164FA163339F20079F936 /* LICENSE-2.0.txt */; };
+		45D1650C163339F20079F936 /* poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D164FB163339F20079F936 /* poweredby.png */; };
+		45D1650D163339F20079F936 /* poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D164FC163339F20079F936 /* poweredby@2x.png */; };
+		45D1650E163339F20079F936 /* small_poweredby.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D164FF163339F20079F936 /* small_poweredby.png */; };
+		45D1650F163339F20079F936 /* small_poweredby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D16500163339F20079F936 /* small_poweredby@2x.png */; };
+		45D1651216333A560079F936 /* ScanditSDKRotatingBarcodePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1651116333A560079F936 /* ScanditSDKRotatingBarcodePicker.m */; };
+		45D1651416333C5B0079F936 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45D1651316333C5B0079F936 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +128,26 @@
 		45D164B81633353F0079F936 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		45D164B91633353F0079F936 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		45D164CD163335B60079F936 /* Cordova.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
+		45D164EC163339F20079F936 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beep.wav; sourceTree = "<group>"; };
+		45D164ED163339F20079F936 /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.txt; sourceTree = "<group>"; };
+		45D164F0163339F20079F936 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = scanditsdk.strings; sourceTree = "<group>"; };
+		45D164F1163339F20079F936 /* empty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = empty.cpp; sourceTree = "<group>"; };
+		45D164F4163339F20079F936 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = scanditsdk.strings; sourceTree = "<group>"; };
+		45D164F5163339F20079F936 /* flashlight-turn-off-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon.png"; sourceTree = "<group>"; };
+		45D164F6163339F20079F936 /* flashlight-turn-off-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-off-icon@2x.png"; sourceTree = "<group>"; };
+		45D164F7163339F20079F936 /* flashlight-turn-on-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon.png"; sourceTree = "<group>"; };
+		45D164F8163339F20079F936 /* flashlight-turn-on-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashlight-turn-on-icon@2x.png"; sourceTree = "<group>"; };
+		45D164F9163339F20079F936 /* libscanditsdk-iphone-2.2.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libscanditsdk-iphone-2.2.4.a"; sourceTree = "<group>"; };
+		45D164FA163339F20079F936 /* LICENSE-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-2.0.txt"; sourceTree = "<group>"; };
+		45D164FB163339F20079F936 /* poweredby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredby.png; sourceTree = "<group>"; };
+		45D164FC163339F20079F936 /* poweredby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredby@2x.png"; sourceTree = "<group>"; };
+		45D164FD163339F20079F936 /* ScanditSDKBarcodePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanditSDKBarcodePicker.h; sourceTree = "<group>"; };
+		45D164FE163339F20079F936 /* ScanditSDKOverlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanditSDKOverlayController.h; sourceTree = "<group>"; };
+		45D164FF163339F20079F936 /* small_poweredby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_poweredby.png; sourceTree = "<group>"; };
+		45D16500163339F20079F936 /* small_poweredby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small_poweredby@2x.png"; sourceTree = "<group>"; };
+		45D1651016333A560079F936 /* ScanditSDKRotatingBarcodePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanditSDKRotatingBarcodePicker.h; sourceTree = "<group>"; };
+		45D1651116333A560079F936 /* ScanditSDKRotatingBarcodePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanditSDKRotatingBarcodePicker.m; sourceTree = "<group>"; };
+		45D1651316333C5B0079F936 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* PerfectBeauty-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PerfectBeauty-Info.plist"; path = "../PerfectBeauty-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +174,7 @@
 				45D164C81633353F0079F936 /* SystemConfiguration.framework in Frameworks */,
 				45D164C91633353F0079F936 /* MobileCoreServices.framework in Frameworks */,
 				45D164CA1633353F0079F936 /* CoreMedia.framework in Frameworks */,
+				45D1650A163339F20079F936 /* libscanditsdk-iphone-2.2.4.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +221,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				45D1651316333C5B0079F936 /* Default-568h@2x.png */,
 				301BF56E109A69640062928A /* www */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -258,6 +297,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				45D1651016333A560079F936 /* ScanditSDKRotatingBarcodePicker.h */,
+				45D1651116333A560079F936 /* ScanditSDKRotatingBarcodePicker.m */,
 				45D164A0163334B90079F936 /* ScanditSDK */,
 				45D164A1163334B90079F936 /* ScanditSDK.h */,
 				45D164A2163334B90079F936 /* ScanditSDK.mm */,
@@ -308,8 +349,41 @@
 		45D164A0163334B90079F936 /* ScanditSDK */ = {
 			isa = PBXGroup;
 			children = (
+				45D164EC163339F20079F936 /* beep.wav */,
+				45D164ED163339F20079F936 /* CHANGELOG.txt */,
+				45D164EE163339F20079F936 /* de.lproj */,
+				45D164F1163339F20079F936 /* empty.cpp */,
+				45D164F2163339F20079F936 /* en.lproj */,
+				45D164F5163339F20079F936 /* flashlight-turn-off-icon.png */,
+				45D164F6163339F20079F936 /* flashlight-turn-off-icon@2x.png */,
+				45D164F7163339F20079F936 /* flashlight-turn-on-icon.png */,
+				45D164F8163339F20079F936 /* flashlight-turn-on-icon@2x.png */,
+				45D164F9163339F20079F936 /* libscanditsdk-iphone-2.2.4.a */,
+				45D164FA163339F20079F936 /* LICENSE-2.0.txt */,
+				45D164FB163339F20079F936 /* poweredby.png */,
+				45D164FC163339F20079F936 /* poweredby@2x.png */,
+				45D164FD163339F20079F936 /* ScanditSDKBarcodePicker.h */,
+				45D164FE163339F20079F936 /* ScanditSDKOverlayController.h */,
+				45D164FF163339F20079F936 /* small_poweredby.png */,
+				45D16500163339F20079F936 /* small_poweredby@2x.png */,
 			);
 			path = ScanditSDK;
+			sourceTree = "<group>";
+		};
+		45D164EE163339F20079F936 /* de.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				45D164EF163339F20079F936 /* scanditsdk.strings */,
+			);
+			path = de.lproj;
+			sourceTree = "<group>";
+		};
+		45D164F2163339F20079F936 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				45D164F3163339F20079F936 /* scanditsdk.strings */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +477,20 @@
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
 				45D164CE163335B60079F936 /* Cordova.plist in Resources */,
+				45D16501163339F20079F936 /* beep.wav in Resources */,
+				45D16502163339F20079F936 /* CHANGELOG.txt in Resources */,
+				45D16503163339F20079F936 /* scanditsdk.strings in Resources */,
+				45D16505163339F20079F936 /* scanditsdk.strings in Resources */,
+				45D16506163339F20079F936 /* flashlight-turn-off-icon.png in Resources */,
+				45D16507163339F20079F936 /* flashlight-turn-off-icon@2x.png in Resources */,
+				45D16508163339F20079F936 /* flashlight-turn-on-icon.png in Resources */,
+				45D16509163339F20079F936 /* flashlight-turn-on-icon@2x.png in Resources */,
+				45D1650B163339F20079F936 /* LICENSE-2.0.txt in Resources */,
+				45D1650C163339F20079F936 /* poweredby.png in Resources */,
+				45D1650D163339F20079F936 /* poweredby@2x.png in Resources */,
+				45D1650E163339F20079F936 /* small_poweredby.png in Resources */,
+				45D1650F163339F20079F936 /* small_poweredby@2x.png in Resources */,
+				45D1651416333C5B0079F936 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +522,8 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				45D164A3163334BA0079F936 /* ScanditSDK.mm in Sources */,
+				45D16504163339F20079F936 /* empty.cpp in Sources */,
+				45D1651216333A560079F936 /* ScanditSDKRotatingBarcodePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +570,22 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		45D164EF163339F20079F936 /* scanditsdk.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45D164F0163339F20079F936 /* de */,
+			);
+			name = scanditsdk.strings;
+			sourceTree = "<group>";
+		};
+		45D164F3163339F20079F936 /* scanditsdk.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45D164F4163339F20079F936 /* en */,
+			);
+			name = scanditsdk.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -498,6 +604,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PerfectBeauty/PerfectBeauty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PerfectBeauty/Plugins/ScanditSDK\"",
+				);
 				PRODUCT_NAME = PerfectBeauty;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,6 +626,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PerfectBeauty/PerfectBeauty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PerfectBeauty/Plugins/ScanditSDK\"",
+				);
 				PRODUCT_NAME = PerfectBeauty;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
