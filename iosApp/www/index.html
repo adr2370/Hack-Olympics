@@ -41,29 +41,32 @@
             app.initialize();
         </script>
 		    <script type="text/javascript">
-
-
 		function clickScan() {
             console.log("clickScanned");
             window.plugins.barcodeScanner.scan(scannerSuccess, scannerFailure);
             console.log("scanDone");
 		}
-
-
-		//------------------------------------------------------------------------------
 		function scannerSuccess(result) {
-		    console.log("scannerSuccess: result: " + result)
-		    resultSpan.innerText = "success: " + JSON.stringify(result)
+		    console.log("scannerSuccess: result: " + result);
+		    resultSpan.innerText = result.text;
+            var url = "http://test.yourperfectbeauty.com/searchByUPC.php",
+            params = "upc="+result.text,
+            result;
+            xmlhttp.open("POST",url,true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    result = xmlhttp.responseText;
+                    resultSpan.innerText = JSON.stringify(result);
+                }
+            };
+            xmlhttp.send(params);
 		}
-
-		//------------------------------------------------------------------------------
 		function scannerFailure(message) {
 		    console.log("scannerFailure: message: " + message)
 		    resultSpan.innerText = "failure: " + JSON.stringify(message)
 		}
-
-
-
 		    </script>
     </body>
 </html>
