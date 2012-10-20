@@ -32,11 +32,38 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
+			<button id="scan-button">scan something</button>
+            <p>scanned: <span id="scan-result">n/a</span>
         </div>
         <script type="text/javascript" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+		    <script type="text/javascript">
+
+
+		function clickScan() {
+            console.log("clickScanned");
+            window.plugins.barcodeScanner.scan(scannerSuccess, scannerFailure);
+            console.log("scanDone");
+		}
+
+
+		//------------------------------------------------------------------------------
+		function scannerSuccess(result) {
+		    console.log("scannerSuccess: result: " + result)
+		    resultSpan.innerText = "success: " + JSON.stringify(result)
+		}
+
+		//------------------------------------------------------------------------------
+		function scannerFailure(message) {
+		    console.log("scannerFailure: message: " + message)
+		    resultSpan.innerText = "failure: " + JSON.stringify(message)
+		}
+
+
+
+		    </script>
     </body>
 </html>

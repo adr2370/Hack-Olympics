@@ -18,18 +18,18 @@
  */
 //
 //  main.m
-//  PerfectBeauty
+//  BarCodeScannerCDV
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
+//  Created by Randy McMillan on 3/7/12.
+//  Copyright OpenOSX.org 2012. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 int main(int argc, char *argv[]) {
     
-    @autoreleasepool {
-	int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
-	return retVal;
-    }
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
+    [pool release];
+    return retVal;
 }

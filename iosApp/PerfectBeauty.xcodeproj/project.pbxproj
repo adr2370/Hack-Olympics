@@ -1,22 +1,4 @@
 // !$*UTF8*$!
-/*
- Licensed to the Apache Software Foundation (ASF) under one
- or more contributor license agreements.  See the NOTICE file
- distributed with this work for additional information
- regarding copyright ownership.  The ASF licenses this file
- to you under the Apache License, Version 2.0 (the
- "License"); you may not use this file except in compliance
- with the License.  You may obtain a copy of the License at
- 
- http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing,
- software distributed under the License is distributed on an
- "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- KIND, either express or implied.  See the License for the
- specific language governing permissions and limitations
- under the License.
-*/
 {
 	archiveVersion = 1;
 	classes = {
@@ -32,7 +14,7 @@
 		1F766FE113BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
 		1F766FE213BBADB100FB74C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDF13BBADB100FB74C0 /* Localizable.strings */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
+		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		301BF570109A69640062928A /* www in Resources */ = {isa = PBXBuildFile; fileRef = 301BF56E109A69640062928A /* www */; };
 		301BF5B5109A6A2B0062928A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5B4109A6A2B0062928A /* AddressBook.framework */; };
 		301BF5B7109A6A2B0062928A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5B6109A6A2B0062928A /* AddressBookUI.framework */; };
@@ -60,6 +42,51 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E1352710E2C1420031B30D /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* Cordova.plist */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		45C4E3011633501400D5C3D2 /* barcodescanner.js in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2D01633501400D5C3D2 /* barcodescanner.js */; };
+		45C4E3021633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D21633501400D5C3D2 /* .gitignore */; };
+		45C4E3031633501400D5C3D2 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2D31633501400D5C3D2 /* Makefile */; };
+		45C4E3041633501400D5C3D2 /* onefile-zxing.py in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D41633501400D5C3D2 /* onefile-zxing.py */; };
+		45C4E3051633501400D5C3D2 /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2D51633501400D5C3D2 /* CDVBarcodeScanner.mm */; };
+		45C4E3061633501400D5C3D2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D61633501400D5C3D2 /* README.md */; };
+		45C4E3071633501400D5C3D2 /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D71633501400D5C3D2 /* scannerOverlay.xib */; };
+		45C4E3081633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DA1633501400D5C3D2 /* .gitignore */; };
+		45C4E3091633501400D5C3D2 /* desktop-app.js in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2DB1633501400D5C3D2 /* desktop-app.js */; };
+		45C4E30A1633501400D5C3D2 /* code_128-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DD1633501400D5C3D2 /* code_128-1.jpg */; };
+		45C4E30B1633501400D5C3D2 /* code_128-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DE1633501400D5C3D2 /* code_128-1.txt */; };
+		45C4E30C1633501400D5C3D2 /* code_39-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DF1633501400D5C3D2 /* code_39-1.gif */; };
+		45C4E30D1633501400D5C3D2 /* code_39-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E01633501400D5C3D2 /* code_39-1.txt */; };
+		45C4E30E1633501400D5C3D2 /* data_matrix-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E11633501400D5C3D2 /* data_matrix-1.jpg */; };
+		45C4E30F1633501400D5C3D2 /* data_matrix-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E21633501400D5C3D2 /* data_matrix-1.txt */; };
+		45C4E3101633501400D5C3D2 /* ean_13-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E31633501400D5C3D2 /* ean_13-1.jpg */; };
+		45C4E3111633501400D5C3D2 /* ean_13-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E41633501400D5C3D2 /* ean_13-1.txt */; };
+		45C4E3121633501400D5C3D2 /* ean_8-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E51633501400D5C3D2 /* ean_8-1.gif */; };
+		45C4E3131633501400D5C3D2 /* ean_8-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E61633501400D5C3D2 /* ean_8-1.txt */; };
+		45C4E3141633501400D5C3D2 /* qr_code-large.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E71633501400D5C3D2 /* qr_code-large.gif */; };
+		45C4E3151633501400D5C3D2 /* qr_code-large.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E81633501400D5C3D2 /* qr_code-large.txt */; };
+		45C4E3161633501400D5C3D2 /* qr_code-medium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E91633501400D5C3D2 /* qr_code-medium.jpg */; };
+		45C4E3171633501400D5C3D2 /* qr_code-medium.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EA1633501400D5C3D2 /* qr_code-medium.txt */; };
+		45C4E3181633501400D5C3D2 /* qr_code-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EB1633501400D5C3D2 /* qr_code-small.png */; };
+		45C4E3191633501400D5C3D2 /* qr_code-small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EC1633501400D5C3D2 /* qr_code-small.txt */; };
+		45C4E31A1633501400D5C3D2 /* upc_a-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2ED1633501400D5C3D2 /* upc_a-1.jpg */; };
+		45C4E31B1633501400D5C3D2 /* upc_a-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EE1633501400D5C3D2 /* upc_a-1.txt */; };
+		45C4E31C1633501400D5C3D2 /* upc_a-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EF1633501400D5C3D2 /* upc_a-2.jpg */; };
+		45C4E31D1633501400D5C3D2 /* upc_a-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F01633501400D5C3D2 /* upc_a-2.txt */; };
+		45C4E31E1633501400D5C3D2 /* upc_e-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F11633501400D5C3D2 /* upc_e-1.gif */; };
+		45C4E31F1633501400D5C3D2 /* upc_e-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F21633501400D5C3D2 /* upc_e-1.txt */; };
+		45C4E3201633501400D5C3D2 /* upc_e-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F31633501400D5C3D2 /* upc_e-2.jpg */; };
+		45C4E3211633501400D5C3D2 /* upc_e-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F41633501400D5C3D2 /* upc_e-2.txt */; };
+		45C4E3221633501400D5C3D2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F51633501400D5C3D2 /* index.html */; };
+		45C4E3231633501400D5C3D2 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2F61633501400D5C3D2 /* Makefile */; };
+		45C4E3241633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F81633501400D5C3D2 /* .gitignore */; };
+		45C4E3251633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FA1633501400D5C3D2 /* .gitignore */; };
+		45C4E3261633501400D5C3D2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FB1633501400D5C3D2 /* index.html */; };
+		45C4E3271633501400D5C3D2 /* phonegap-app.js in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2FC1633501400D5C3D2 /* phonegap-app.js */; };
+		45C4E3281633501400D5C3D2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FD1633501400D5C3D2 /* README.md */; };
+		45C4E3291633501400D5C3D2 /* rebuild-tests-json.py in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FE1633501400D5C3D2 /* rebuild-tests-json.py */; };
+		45C4E32A1633501400D5C3D2 /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2FF1633501400D5C3D2 /* zxing-all-in-one.cpp */; };
+		45C4E32C163353A500D5C3D2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32B163353A500D5C3D2 /* AssetsLibrary.framework */; };
+		45C4E32E163353C100D5C3D2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32D163353C100D5C3D2 /* CoreVideo.framework */; };
+		45C4E330163353E400D5C3D2 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32F163353E400D5C3D2 /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,33 +104,19 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
-		302D95EB14D23909003F00A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 686357A9141002F100DF4CF2;
-			remoteInfo = CordovaLibTests;
-		};
-		3088BBB4154F38EF009F9C59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 303A4068152124BB00182201;
-			remoteInfo = CordovaLibApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* PerfectBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PerfectBeauty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* PerfectBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F766FDD13BBADB100FB74C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		1F766FE013BBADB100FB74C0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = "../lib/ios/CordovaLib/CordovaLib.xcodeproj"; sourceTree = "<group>"; };
+		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = ../lib/ios/CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		301BF5B4109A6A2B0062928A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		301BF5B6109A6A2B0062928A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -134,6 +147,52 @@
 		30E1352610E2C1420031B30D /* Cordova.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cordova.plist; path = ../Cordova.plist; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* PerfectBeauty-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PerfectBeauty-Prefix.pch"; sourceTree = "<group>"; };
+		45C4E2D01633501400D5C3D2 /* barcodescanner.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = barcodescanner.js; sourceTree = "<group>"; };
+		45C4E2D21633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		45C4E2D31633501400D5C3D2 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		45C4E2D41633501400D5C3D2 /* onefile-zxing.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "onefile-zxing.py"; sourceTree = "<group>"; };
+		45C4E2D51633501400D5C3D2 /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CDVBarcodeScanner.mm; path = ../BarcodeScanner/CDVBarcodeScanner.mm; sourceTree = "<group>"; };
+		45C4E2D61633501400D5C3D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		45C4E2D71633501400D5C3D2 /* scannerOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scannerOverlay.xib; sourceTree = "<group>"; };
+		45C4E2DA1633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		45C4E2DB1633501400D5C3D2 /* desktop-app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "desktop-app.js"; sourceTree = "<group>"; };
+		45C4E2DD1633501400D5C3D2 /* code_128-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "code_128-1.jpg"; sourceTree = "<group>"; };
+		45C4E2DE1633501400D5C3D2 /* code_128-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "code_128-1.txt"; sourceTree = "<group>"; };
+		45C4E2DF1633501400D5C3D2 /* code_39-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "code_39-1.gif"; sourceTree = "<group>"; };
+		45C4E2E01633501400D5C3D2 /* code_39-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "code_39-1.txt"; sourceTree = "<group>"; };
+		45C4E2E11633501400D5C3D2 /* data_matrix-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "data_matrix-1.jpg"; sourceTree = "<group>"; };
+		45C4E2E21633501400D5C3D2 /* data_matrix-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "data_matrix-1.txt"; sourceTree = "<group>"; };
+		45C4E2E31633501400D5C3D2 /* ean_13-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ean_13-1.jpg"; sourceTree = "<group>"; };
+		45C4E2E41633501400D5C3D2 /* ean_13-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ean_13-1.txt"; sourceTree = "<group>"; };
+		45C4E2E51633501400D5C3D2 /* ean_8-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ean_8-1.gif"; sourceTree = "<group>"; };
+		45C4E2E61633501400D5C3D2 /* ean_8-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ean_8-1.txt"; sourceTree = "<group>"; };
+		45C4E2E71633501400D5C3D2 /* qr_code-large.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "qr_code-large.gif"; sourceTree = "<group>"; };
+		45C4E2E81633501400D5C3D2 /* qr_code-large.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "qr_code-large.txt"; sourceTree = "<group>"; };
+		45C4E2E91633501400D5C3D2 /* qr_code-medium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "qr_code-medium.jpg"; sourceTree = "<group>"; };
+		45C4E2EA1633501400D5C3D2 /* qr_code-medium.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "qr_code-medium.txt"; sourceTree = "<group>"; };
+		45C4E2EB1633501400D5C3D2 /* qr_code-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code-small.png"; sourceTree = "<group>"; };
+		45C4E2EC1633501400D5C3D2 /* qr_code-small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "qr_code-small.txt"; sourceTree = "<group>"; };
+		45C4E2ED1633501400D5C3D2 /* upc_a-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "upc_a-1.jpg"; sourceTree = "<group>"; };
+		45C4E2EE1633501400D5C3D2 /* upc_a-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_a-1.txt"; sourceTree = "<group>"; };
+		45C4E2EF1633501400D5C3D2 /* upc_a-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "upc_a-2.jpg"; sourceTree = "<group>"; };
+		45C4E2F01633501400D5C3D2 /* upc_a-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_a-2.txt"; sourceTree = "<group>"; };
+		45C4E2F11633501400D5C3D2 /* upc_e-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "upc_e-1.gif"; sourceTree = "<group>"; };
+		45C4E2F21633501400D5C3D2 /* upc_e-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_e-1.txt"; sourceTree = "<group>"; };
+		45C4E2F31633501400D5C3D2 /* upc_e-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "upc_e-2.jpg"; sourceTree = "<group>"; };
+		45C4E2F41633501400D5C3D2 /* upc_e-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_e-2.txt"; sourceTree = "<group>"; };
+		45C4E2F51633501400D5C3D2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		45C4E2F61633501400D5C3D2 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		45C4E2F81633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		45C4E2FA1633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		45C4E2FB1633501400D5C3D2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		45C4E2FC1633501400D5C3D2 /* phonegap-app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "phonegap-app.js"; sourceTree = "<group>"; };
+		45C4E2FD1633501400D5C3D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		45C4E2FE1633501400D5C3D2 /* rebuild-tests-json.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "rebuild-tests-json.py"; sourceTree = "<group>"; };
+		45C4E2FF1633501400D5C3D2 /* zxing-all-in-one.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "zxing-all-in-one.cpp"; path = "../BarcodeScanner/zxing-all-in-one.cpp"; sourceTree = "<group>"; };
+		45C4E3001633501400D5C3D2 /* zxing-all-in-one.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "zxing-all-in-one.h"; path = "../BarcodeScanner/zxing-all-in-one.h"; sourceTree = "<group>"; };
+		45C4E32B163353A500D5C3D2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		45C4E32D163353C100D5C3D2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		45C4E32F163353E400D5C3D2 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* PerfectBeauty-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PerfectBeauty-Info.plist"; path = "../PerfectBeauty-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,12 +202,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				45C4E32C163353A500D5C3D2 /* AssetsLibrary.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				45C4E32E163353C100D5C3D2 /* CoreVideo.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				301BF5B5109A6A2B0062928A /* AddressBook.framework in Frameworks */,
 				301BF5B7109A6A2B0062928A /* AddressBookUI.framework in Frameworks */,
 				301BF5B9109A6A2B0062928A /* AudioToolbox.framework in Frameworks */,
+				45C4E330163353E400D5C3D2 /* libiconv.dylib in Frameworks */,
 				301BF5BB109A6A2B0062928A /* AVFoundation.framework in Frameworks */,
 				301BF5BD109A6A2B0062928A /* CFNetwork.framework in Frameworks */,
 				301BF5BF109A6A2B0062928A /* CoreLocation.framework in Frameworks */,
@@ -173,7 +235,7 @@
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 			);
 			name = Classes;
-			path = "PerfectBeauty/Classes";
+			path = PerfectBeauty/Classes;
 			sourceTree = SOURCE_ROOT;
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -222,7 +284,7 @@
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
-			path = "PerfectBeauty";
+			path = PerfectBeauty;
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
@@ -240,12 +302,15 @@
 				307D28A1123043350040C0FA /* CordovaBuildSettings.xcconfig */,
 			);
 			name = Resources;
-			path = "PerfectBeauty/Resources";
+			path = PerfectBeauty/Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45C4E32F163353E400D5C3D2 /* libiconv.dylib */,
+				45C4E32D163353C100D5C3D2 /* CoreVideo.framework */,
+				45C4E32B163353A500D5C3D2 /* AssetsLibrary.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -268,8 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				301BF535109A57CC0062928A /* libCordova.a */,
-				302D95EC14D23909003F00A1 /* CordovaLibTests.octest */,
-				3088BBB5154F38EF009F9C59 /* CordovaLibApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,9 +340,13 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				45C4E2FF1633501400D5C3D2 /* zxing-all-in-one.cpp */,
+				45C4E3001633501400D5C3D2 /* zxing-all-in-one.h */,
+				45C4E2D51633501400D5C3D2 /* CDVBarcodeScanner.mm */,
+				45C4E2CF1633501400D5C3D2 /* BarcodeScanner */,
 			);
 			name = Plugins;
-			path = "PerfectBeauty/Plugins";
+			path = PerfectBeauty/Plugins;
 			sourceTree = SOURCE_ROOT;
 		};
 		308D052D1370CCF300D202BF /* icons */ = {
@@ -321,6 +388,102 @@
 			path = se.lproj;
 			sourceTree = "<group>";
 		};
+		45C4E2CF1633501400D5C3D2 /* BarcodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				45C4E2D01633501400D5C3D2 /* barcodescanner.js */,
+				45C4E2D11633501400D5C3D2 /* build */,
+				45C4E2D61633501400D5C3D2 /* README.md */,
+				45C4E2D71633501400D5C3D2 /* scannerOverlay.xib */,
+				45C4E2D81633501400D5C3D2 /* test */,
+			);
+			name = BarcodeScanner;
+			path = ../BarcodeScanner;
+			sourceTree = "<group>";
+		};
+		45C4E2D11633501400D5C3D2 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				45C4E2D21633501400D5C3D2 /* .gitignore */,
+				45C4E2D31633501400D5C3D2 /* Makefile */,
+				45C4E2D41633501400D5C3D2 /* onefile-zxing.py */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		45C4E2D81633501400D5C3D2 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				45C4E2D91633501400D5C3D2 /* desktop-app */,
+				45C4E2F61633501400D5C3D2 /* Makefile */,
+				45C4E2F71633501400D5C3D2 /* phonegap-app */,
+				45C4E2FD1633501400D5C3D2 /* README.md */,
+				45C4E2FE1633501400D5C3D2 /* rebuild-tests-json.py */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		45C4E2D91633501400D5C3D2 /* desktop-app */ = {
+			isa = PBXGroup;
+			children = (
+				45C4E2DA1633501400D5C3D2 /* .gitignore */,
+				45C4E2DB1633501400D5C3D2 /* desktop-app.js */,
+				45C4E2DC1633501400D5C3D2 /* images */,
+				45C4E2F51633501400D5C3D2 /* index.html */,
+			);
+			path = "desktop-app";
+			sourceTree = "<group>";
+		};
+		45C4E2DC1633501400D5C3D2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				45C4E2DD1633501400D5C3D2 /* code_128-1.jpg */,
+				45C4E2DE1633501400D5C3D2 /* code_128-1.txt */,
+				45C4E2DF1633501400D5C3D2 /* code_39-1.gif */,
+				45C4E2E01633501400D5C3D2 /* code_39-1.txt */,
+				45C4E2E11633501400D5C3D2 /* data_matrix-1.jpg */,
+				45C4E2E21633501400D5C3D2 /* data_matrix-1.txt */,
+				45C4E2E31633501400D5C3D2 /* ean_13-1.jpg */,
+				45C4E2E41633501400D5C3D2 /* ean_13-1.txt */,
+				45C4E2E51633501400D5C3D2 /* ean_8-1.gif */,
+				45C4E2E61633501400D5C3D2 /* ean_8-1.txt */,
+				45C4E2E71633501400D5C3D2 /* qr_code-large.gif */,
+				45C4E2E81633501400D5C3D2 /* qr_code-large.txt */,
+				45C4E2E91633501400D5C3D2 /* qr_code-medium.jpg */,
+				45C4E2EA1633501400D5C3D2 /* qr_code-medium.txt */,
+				45C4E2EB1633501400D5C3D2 /* qr_code-small.png */,
+				45C4E2EC1633501400D5C3D2 /* qr_code-small.txt */,
+				45C4E2ED1633501400D5C3D2 /* upc_a-1.jpg */,
+				45C4E2EE1633501400D5C3D2 /* upc_a-1.txt */,
+				45C4E2EF1633501400D5C3D2 /* upc_a-2.jpg */,
+				45C4E2F01633501400D5C3D2 /* upc_a-2.txt */,
+				45C4E2F11633501400D5C3D2 /* upc_e-1.gif */,
+				45C4E2F21633501400D5C3D2 /* upc_e-1.txt */,
+				45C4E2F31633501400D5C3D2 /* upc_e-2.jpg */,
+				45C4E2F41633501400D5C3D2 /* upc_e-2.txt */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		45C4E2F71633501400D5C3D2 /* phonegap-app */ = {
+			isa = PBXGroup;
+			children = (
+				45C4E2F81633501400D5C3D2 /* .gitignore */,
+				45C4E2F91633501400D5C3D2 /* images */,
+				45C4E2FB1633501400D5C3D2 /* index.html */,
+				45C4E2FC1633501400D5C3D2 /* phonegap-app.js */,
+			);
+			path = "phonegap-app";
+			sourceTree = "<group>";
+		};
+		45C4E2F91633501400D5C3D2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				45C4E2FA1633501400D5C3D2 /* .gitignore */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,8 +501,8 @@
 			dependencies = (
 				301BF551109A68C00062928A /* PBXTargetDependency */,
 			);
-			name = "PerfectBeauty";
-			productName = "PerfectBeauty";
+			name = PerfectBeauty;
+			productName = PerfectBeauty;
 			productReference = 1D6058910D05DD3D006BFB54 /* PerfectBeauty.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -388,20 +551,6 @@
 			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		302D95EC14D23909003F00A1 /* CordovaLibTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CordovaLibTests.octest;
-			remoteRef = 302D95EB14D23909003F00A1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3088BBB5154F38EF009F9C59 /* CordovaLibApp.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = CordovaLibApp.app;
-			remoteRef = 3088BBB4154F38EF009F9C59 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -426,6 +575,41 @@
 				3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */,
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
+				45C4E3021633501400D5C3D2 /* .gitignore in Resources */,
+				45C4E3041633501400D5C3D2 /* onefile-zxing.py in Resources */,
+				45C4E3061633501400D5C3D2 /* README.md in Resources */,
+				45C4E3071633501400D5C3D2 /* scannerOverlay.xib in Resources */,
+				45C4E3081633501400D5C3D2 /* .gitignore in Resources */,
+				45C4E30A1633501400D5C3D2 /* code_128-1.jpg in Resources */,
+				45C4E30B1633501400D5C3D2 /* code_128-1.txt in Resources */,
+				45C4E30C1633501400D5C3D2 /* code_39-1.gif in Resources */,
+				45C4E30D1633501400D5C3D2 /* code_39-1.txt in Resources */,
+				45C4E30E1633501400D5C3D2 /* data_matrix-1.jpg in Resources */,
+				45C4E30F1633501400D5C3D2 /* data_matrix-1.txt in Resources */,
+				45C4E3101633501400D5C3D2 /* ean_13-1.jpg in Resources */,
+				45C4E3111633501400D5C3D2 /* ean_13-1.txt in Resources */,
+				45C4E3121633501400D5C3D2 /* ean_8-1.gif in Resources */,
+				45C4E3131633501400D5C3D2 /* ean_8-1.txt in Resources */,
+				45C4E3141633501400D5C3D2 /* qr_code-large.gif in Resources */,
+				45C4E3151633501400D5C3D2 /* qr_code-large.txt in Resources */,
+				45C4E3161633501400D5C3D2 /* qr_code-medium.jpg in Resources */,
+				45C4E3171633501400D5C3D2 /* qr_code-medium.txt in Resources */,
+				45C4E3181633501400D5C3D2 /* qr_code-small.png in Resources */,
+				45C4E3191633501400D5C3D2 /* qr_code-small.txt in Resources */,
+				45C4E31A1633501400D5C3D2 /* upc_a-1.jpg in Resources */,
+				45C4E31B1633501400D5C3D2 /* upc_a-1.txt in Resources */,
+				45C4E31C1633501400D5C3D2 /* upc_a-2.jpg in Resources */,
+				45C4E31D1633501400D5C3D2 /* upc_a-2.txt in Resources */,
+				45C4E31E1633501400D5C3D2 /* upc_e-1.gif in Resources */,
+				45C4E31F1633501400D5C3D2 /* upc_e-1.txt in Resources */,
+				45C4E3201633501400D5C3D2 /* upc_e-2.jpg in Resources */,
+				45C4E3211633501400D5C3D2 /* upc_e-2.txt in Resources */,
+				45C4E3221633501400D5C3D2 /* index.html in Resources */,
+				45C4E3241633501400D5C3D2 /* .gitignore in Resources */,
+				45C4E3251633501400D5C3D2 /* .gitignore in Resources */,
+				45C4E3261633501400D5C3D2 /* index.html in Resources */,
+				45C4E3281633501400D5C3D2 /* README.md in Resources */,
+				45C4E3291633501400D5C3D2 /* rebuild-tests-json.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +640,13 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				45C4E3011633501400D5C3D2 /* barcodescanner.js in Sources */,
+				45C4E3031633501400D5C3D2 /* Makefile in Sources */,
+				45C4E3051633501400D5C3D2 /* CDVBarcodeScanner.mm in Sources */,
+				45C4E3091633501400D5C3D2 /* desktop-app.js in Sources */,
+				45C4E3231633501400D5C3D2 /* Makefile in Sources */,
+				45C4E3271633501400D5C3D2 /* phonegap-app.js in Sources */,
+				45C4E32A1633501400D5C3D2 /* zxing-all-in-one.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +711,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PerfectBeauty/PerfectBeauty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PRODUCT_NAME = "PerfectBeauty";
+				PRODUCT_NAME = PerfectBeauty;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -538,7 +729,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "PerfectBeauty/PerfectBeauty-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
-				PRODUCT_NAME = "PerfectBeauty";
+				PRODUCT_NAME = PerfectBeauty;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
