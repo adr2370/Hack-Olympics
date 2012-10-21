@@ -98,10 +98,34 @@ onDeviceReady: function() {
         if(!window.plugins) window.plugins = {};
         window.plugins.barcodeScanner = new BarcodeScanner();
         
-        scanButton = document.getElementById("scan-button");
-        resultSpan = document.getElementById("scan-result");
+        scanButton = document.getElementById("scanner");
+    function clickScan() {
+        $("#scanner").removeClass("ui-btn-active");
+            window.plugins.barcodeScanner.scan(function(result) {
+                                               console.log("scannerSuccess: result: " + result);
+                                               resultSpan.innerText = result.text;
+                                               var url = "http://test.yourperfectbeauty.com/searchByUPC.php",
+                                               params = "upc="+result.text,
+                                               result;
+                                               var xmlhttp = new XMLHttpRequest();
+                                               xmlhttp.open("POST",url,true);
+                                               xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                                               xmlhttp.onreadystatechange = function(){
+                                               if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                                               {
+                                               result = xmlhttp.responseText;
+                                               console.log(result);
+                                               resultObj = eval('('+result+')');
+                                               window.location="productDetail.html?pid="+resultObj['ASIN'];
+                                               }
+                                               };
+                                               xmlhttp.send(params);
+                                               },
+                                               function scannerFailure(message) {
+                                               console.log("scannerFailure: message: " + message);
+                                               }/*, ["BarcodeOverlay"]*/);
+        }
         scanButton.addEventListener("click", clickScan, false);
-        createButton.addEventListener("click", clickCreate, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
