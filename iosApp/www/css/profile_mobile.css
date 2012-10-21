@@ -9,6 +9,10 @@
 	width: 30%;
 	float: left;
 	text-align: center;
+	font-size: 8px;
+}
+#compliments {
+	width: 39%;
 }
 #points, #compliments {
 	border-right: 1px solid #aaa;
