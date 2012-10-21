@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
@@ -23,32 +23,33 @@
     <body>
 		<!-- Home -->
 		<div data-role="page" id="page1">
+	    	<div data-role="header" data-position="fixed">
+	    		<h1>Profile</h1>
+	    	</div><!-- /header -->
+
 		    <div data-role="content">
-		        <div style="margin-bottom: 20px;">
-		            <img style="width: 288px; height: 80px" src="img/PB.jpg">
-		        </div>
 		    	<div class="ui-body ui-body-c">
-			    	<form id="login" action="index_old.html" method="GET">
-				        <div data-role="fieldcontain">
-				            <fieldset data-role="controlgroup">
-				                <label for="email">
-				                    Email:
-				                </label>
-				                <input name="email" id="email" placeholder="" value="" type="email">
-				            </fieldset>
-				        </div>
-				        <div data-role="fieldcontain">
-				            <fieldset data-role="controlgroup">
-				                <label for="password">
-				                    Password:
-				                </label>
-				                <input name="password" id="password" placeholder="" value="" type="password">
-				            </fieldset>
-				        </div>
-				        <input id="signIn" type="submit" value="Sign In">
-			        </form>
-		    	</div>
+		    		<div id="image"></div>
+			    	<div id="name"></div>
+			    	<div id="email"></div>
+			    </div>
+			    <div class="ui-body ui-body-c">
+			    	div#
+			    </div>
+
 		    </div>
+
+		    <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+		    	<div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+		    		<ul>
+		    			<li><a href="index.html" id="home" data-icon="custom" rel="external" data-ajax="false">Home</a></li>
+		    			<li><a href="products.html" id="products" data-icon="custom" rel="external" data-ajax="false">Products</a></li>
+		    			<li><a href="" id="camera" data-icon="custom" rel="external" data-ajax="false">Camera</a></li>
+		    			<li><a href="scan.html" id="scanner" data-icon="custom" rel="external" data-ajax="false">Scanner</a></li>
+		    			<li><a href="#" id="profile" data-icon="custom" rel="external" data-ajax="false">Profile</a></li>
+		    		</ul>
+		    	</div><!-- /navbar -->
+		    </div><!-- /footer -->
 		</div>
 		<script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
@@ -59,6 +60,25 @@
 			    $.mobile.phonegapNavigationEnabled = true;
 			    $.mobile.pushStateEnabled = false;
 			});
-        </script>
+
+			$.ajax({
+				type: "GET",
+				cache: true,
+				url: 'http://test.yourperfectbeauty.com/api/profile.php?email=daifu.ye@gmail.com',
+				dataType: "json",
+				error: function(xhr, settings, exception){
+					$("#name").text(xhr);
+
+					alert('The update server could not be contacted.');
+				},
+				success: function(data){
+					if (data.status) {
+						var profile = data.profile,
+						name = profile.firstname;
+						$("#name").text(name);
+					}
+				}
+			});
+		</script>
     </body>
 </html>
