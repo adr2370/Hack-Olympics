@@ -6,8 +6,8 @@
 /* Menubar */
 .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
 .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
-#home .ui-icon { background:url(../img/28-star.png) 50% 50% no-repeat; background-size: 26px 26px; }
-#products .ui-icon { background:url(../img/80-shopping-cart.png) 50% 50% no-repeat; background-size: 26px 19px;  }
+#home .ui-icon { background:url(../img/glyphicons_020_home.png) 50% 50% no-repeat; background-size: 24px 23px; }
+#products .ui-icon { background:url(../img/glyphicons_350_shopping_bag.png) 50% 50% no-repeat; background-size: 23px 26px;  }
 #camera .ui-icon { background:url(../img/86-camera.png) 50% 50% no-repeat;  background-size: 24px 18px; }
 #scanner .ui-icon { background:url(../img/195-barcode.png) 50% 50% no-repeat;  background-size: 24px 18px; }
 #profile .ui-icon { background:url(../img/111-user.png) 50% 50% no-repeat;  background-size: 24px 21px; }
