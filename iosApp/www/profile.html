@@ -52,7 +52,7 @@
 		    			<li><a href="products.html" id="products" data-icon="custom" rel="external" data-ajax="false">Products</a></li>
 		    			<li><a href="" id="camera" data-icon="custom" rel="external" data-ajax="false">Camera</a></li>
 		    			<li><a href="scan.html" id="scanner" data-icon="custom" rel="external" data-ajax="false">Scanner</a></li>
-		    			<li><a href="#" id="profile" data-icon="custom" rel="external" data-ajax="false">Profile</a></li>
+		    			<li><a href="#" id="profile" data-icon="custom" rel="external" data-ajax="false" class="ui-btn-active">Profile</a></li>
 		    		</ul>
 		    	</div><!-- /navbar -->
 		    </div><!-- /footer -->
@@ -104,7 +104,7 @@
 							html += "<div class='r-title'><h3>"+v['title']+"</h3></div>";
 							html += "<div class='r-desp'>"+v['value']+"</div>";
 							$.each(v['routineImgs'], function(img_k, img_v){
-								html += "<img src='"+img_v['image']+"' height='110px' width='auto'>";
+								html += "<img src='"+img_v['image']+"' height='auto' width='100%'>";
 							});
 							html += "</div>";
 							routineDiv.append(html);
