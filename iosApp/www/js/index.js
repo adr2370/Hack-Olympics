@@ -72,8 +72,8 @@ onDeviceReady: function() {
                 
                 return Cordova.exec(successWrapper, fail, "BarcodeScanner", "scan", options);
                 }
-        
-        //-------------------------------------------------------------------
+    
+    //-------------------------------------------------------------------
         BarcodeScanner.prototype.encode = function(type, data, success, fail, options) {
             if (!fail) { fail = function() {}}
             
@@ -89,19 +89,20 @@ onDeviceReady: function() {
             
             return Cordova.exec(success, fail, "BarcodeScanner", "encode", [{type: type, data: data, options: options}]);
         }
+    console.log("HERE");
     
         BarcodeScanner.prototype.setup = function(types) {
             return Cordova.exec("BarcodeScanner.setup", types);
         };
     
+    console.log("HERE");
         //Keep at bottom but remove the addConstructor for Cordova 2+
         if(!window.plugins) window.plugins = {};
         window.plugins.barcodeScanner = new BarcodeScanner();
         
         scanButton = document.getElementById("scan-button");
-        resultSpan = document.getElementById("scan-result");
         scanButton.addEventListener("click", clickScan, false);
-        createButton.addEventListener("click", clickCreate, false);
+    console.log("HERE");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
