@@ -38,7 +38,7 @@
 	    		<h1>Profile</h1>
 	    	</div><!-- /header -->
 
-		    <div data-role="content">
+		    <div data-role="content" style="margin-top:40px; margin-bottom:45px;">
 		    	<div class="ui-body ui-body-c">
 		    		<div class="loading"></div>
 		    		<div id="image"></div>
@@ -114,7 +114,7 @@
 							html += "<div class='r-desp'>"+v['value']+"</div>";
 							html += "<div class='r-box'>";
 							$.each(v['routineImgs'], function(img_k, img_v){
-								html += "<a href='productDetail.html?pid="+img_v['ASIN']+"' rel="external" data-ajax="false"><img src='"+img_v['image']+"' class='dailyRoutine' height='auto' width='33%'></a>";
+								html += "<a href='productDetail.html?pid="+img_v['ASIN']+"' rel='external' data-ajax='false'><img src='"+img_v['image']+"' class='dailyRoutine' height='auto' width='33%'></a>";
 							});
 							html += "</div></div>";
 							routineDiv.append(html);
