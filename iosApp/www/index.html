@@ -24,7 +24,6 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <title>Perfect Beauty</title>
         <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
@@ -67,11 +66,12 @@
                 font-size: 16px
             }
             .homeFeedComments {
-                background-color: #ccc;
+                background-color: #D68189;
                 padding: 5px 10px;
             }
 
             .homeFeedComments a {
+                color: #F4EAD5;
                 text-decoration: none;
                 display: block;
 
@@ -94,36 +94,6 @@
 
             <div data-role="content" >
                 <ul id="homeFeed">
-                    <li>
-                        <ul>
-                            <li class="picture"><img src="https://d11lxttoebl3uu.cloudfront.net/upload/upload/1799223057037/1799223057037_8ff73e161de1b006155e38e666791447quotes308.jpg" alt=""></li>
-                            <li class="homeFeedName">Lacey</li>
-                            <li class="homeFeedStatus">True</li>
-                            <li class="homeFeedComments">0 comments</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li class="picture"><img src="https://d11lxttoebl3uu.cloudfront.net/upload/upload/1606440346002/1606440346002_f0e1357252f09bb79d4f8599633dbf54534730_536349066381477_1875374613_n.jpg" alt=""></li>
-                            <li class="homeFeedName">Elaya</li>
-                            <li class="homeFeedStatus">I could not resist these! #Bargain #Ross #Heels #Brown #Booties</li>
-                            <li class="homeFeedComments">1 comments</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li class="homeFeedName">Elaya</li>
-                            <li class="homeFeedStatus">Heading to bed now. Early productive day tomorrow but I was browsing some videos and I want to know... What makeup brush set do you have/ want and why? I don't own a brush set yet and I want one but I don't know what to get.... Until next time, Goodnight Beauties!</li>
-                            <li class="homeFeedComments"><a href="#">3 comments<span class="compliment"></span></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li class="homeFeedName">Lacey</li>
-                            <li class="homeFeedStatus">Hope everyone had a good day. nite loves</li>
-                            <li class="homeFeedComments">2 comments</li>
-                        </ul>
-                    </li>
                 </ul>
 
             </div><!-- /home -->
@@ -209,5 +179,33 @@
                 $.mobile.pushStateEnabled = false;
             });
         </script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $.getJSON('http://test.yourperfectbeauty.com/api/home.php', function(data) {
+                // Grab firstname, updates, user_complements from API
+                var item = jQuery.parseJSON(data.updates);
+                 $.each(item, function(key,val){
+                    if (null!=val.attachment_filename)
+                    {
+                        var img = val.attachment_filename[0],
+                        name = val.firstname,
+                        status = val.updates,
+                        comments = val.total_comment;       
+                        console.log(img);
+                        
+                        $('ul#homeFeed').append('<li><ul><li class="picture"><img src="'+img+'" alt=""></li><li class="homeFeedName">'+name+'</li><li class="homeFeedStatus">'+status+'</li><li class="homeFeedComments"><a href="#">'+comments+' comments</a></li></ul></li>');     
+                    }
+                    else
+                    {
+                        var name = val.firstname,
+                        status = val.updates,
+                        comments = val.total_comment;
+
+                        $('ul#homeFeed').append('<li><ul><li class="homeFeedName">'+name+'</li><li class="homeFeedStatus">'+status+'</li><li class="homeFeedComments"><a href="#">'+comments+' comments</a></li></ul></li>');
+                    }
+                 });
+            });
+        });
+        </script>   
     </body>
 </html>
