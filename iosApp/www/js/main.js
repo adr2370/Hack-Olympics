@@ -692,7 +692,7 @@ function moreComment(prdId,multiplier,limit,divisor){
 							moreComment(prdId,multiplier,limit,divisor);
 						});
 					} else if((i == size-1)&&!resultObj[size-1]) {
-						html1 = "<div class='noMoreComment'>No More Reviews</div>";
+						html1 = "<div class='noMoreComment' style='float:left;text-align:left;'>No More Reviews</div>";
 						$('#product').append(html1);
 
 					}
