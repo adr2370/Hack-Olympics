@@ -8,19 +8,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content=""><!-- Le styles -->
-		<!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">-->
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-</script>
-		<script type="text/javascript" src="js/jquery.form.js"></script>
-		<link href="css/header.css" rel="stylesheet" type="text/css">
-		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
-		<link href="css/index.css" rel="stylesheet" type="text/css">
-		
-		<script type="text/javascript" src="bootstrap/js/bootstrap.js">
-</script>		
-		<script type="text/javascript">if (window.location.hash == '#_=_')window.location.hash = '';</script>
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+            <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">-->
+            
+            <link rel="stylesheet" href="css/reset.css">
+                <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+                <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+                <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+                <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+                
+                <link href="style.css" rel="stylesheet" type="text/css">
+                    <script type="text/javascript" src="js/jquery.form.js"></script>
+                    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+                    <link href="css/header.css" rel="stylesheet" type="text/css">
+                        <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+                            <!--<link href="css/index.css" rel="stylesheet" type="text/css">-->
+                            <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
+                            
 		<style type="text/css">
 		  .typeahead.dropdown-menu {
 		    overflow: hidden;
@@ -54,6 +57,59 @@
 		  })();
 
 		</script>
+                            
+                            <style>
+                                .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+                                .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+                                #home .ui-icon { background:  url(img/28-star.png) 50% 50% no-repeat; background-size: 26px 26px; }
+                                #products .ui-icon { background:  url(img/80-shopping-cart.png) 50% 50% no-repeat; background-size: 26px 19px;  }
+                                #camera .ui-icon { background:  url(img/86-camera.png) 50% 50% no-repeat;  background-size: 24px 18px; }
+                                #scanner .ui-icon { background:  url(img/195-barcode.png) 50% 50% no-repeat;  background-size: 24px 18px; }
+                                #profile .ui-icon { background:  url(img/111-user.png) 50% 50% no-repeat;  background-size: 24px 21px; }
+                                
+                                
+                                ul#homeFeed > li{
+                                    border-radius: 10px;
+                                    border:1px solid #ccc;
+                                    margin-bottom: 20px;
+                                    overflow:hidden;
+                                    box-shadow: 0px 1px 5px #333;
+                                    font: 14px Helvetica,Arial;
+                                    text-transform: none;
+                                }
+                                ul#homeFeed img{
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                
+                                .homeFeedName, .homeFeedStatus {
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                }
+                                .homeFeedName {
+                                    color:#ccc;
+                                    font-weight: bold;
+                                    padding-top: 5px;
+                                }
+                                .homeFeedStatus {
+                                    margin-bottom: 10px;
+                                    font-size: 16px
+                                }
+                                .homeFeedComments {
+                                    background-color: #ccc;
+                                    padding: 5px 10px;
+                                }
+                                
+                                .homeFeedComments a {
+                                    text-decoration: none;
+                                    display: block;
+                                    
+                                }
+                                
+                                .complement {
+                                    
+                                }
+                                </style>
 	</head>
 	
 	<body>
@@ -192,45 +248,39 @@ var similarProducts=1;
 		defaultsVal(val,ids);
 	}
 </script>
-		<div id="mainWrapper">
+            <div data-role="page" id="view">
+                
+                <div data-role="header" data-position="fixed">
+                    <h1>Products</h1>
+                </div><!-- /header -->
+                
+                <div data-role="content">
+		<div id="mainWrapper" style="margin-left:-15px;margin-top:12px;margin-bottom:50px;">
 			<div class="mainBlock leftBlock">	
 						<div style="border-bottom: 1px solid #DDD;padding-bottom: 7px; margin-bottom: 12px;color: #C93C9A;">
 							<div id="productsDisplayTab1" class="productsDisplayTab">
-								You
+								
 							</div>
 							<div id="productsDisplayTab2" class="productsDisplayTab">
 								All
 							</div>
 							<div id="productsDisplayTab3" class="productsDisplayTab">
-								Most
+								Most Reviewed
 							</div>
 							<div id="productsDisplayTab4" class="productsDisplayTab">
-								Highest
+								Highest Rated
 							</div>
 						</div>
-			<div class="loader" style="display:none;"><img src="loading.gif"/></div>
-                <div class="productsContainer">
-			</div>
+                <div class="productsContainer" style="margin-top:-5px;">
+                </div>
+                <div class="loader" style="display:none;"><img src="loading.gif"/></div>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
 (function(){
-var tabRTitle1 = $('#productsDisplayTab1');
 var tabRTitle2 = $('#productsDisplayTab2');
 var tabRTitle3 = $('#productsDisplayTab3');
 var tabRTitle4 = $('#productsDisplayTab4');
 var allTitles = $('.productsDisplayTab');
-
-tabRTitle1.on('click',function(){
-	if($("#productsDisplayTab1").hasClass("activeTabs")) {
-	} else {
-		similarProducts=1;
-		prevC=0;
-		$(".productsContainer").html('');
-		loadMoreProduct(0,'http://test.yourperfectbeauty.com/img','https://d11lxttoebl3uu.cloudfront.net/upload/upload/product',userid,similarProducts);
-		allTitles.removeClass('activeTabs');
-		tabRTitle1.addClass('activeTabs');
-	}
-});
 
 tabRTitle2.on('click',function(){
 	if($("#productsDisplayTab2").hasClass("activeTabs")) {
@@ -269,7 +319,7 @@ tabRTitle4.on('click',function(){
 });
 
 jQuery(window).load(function () {
-	tabRTitle1.click();
+	tabRTitle2.click();
 });
 })();
 </script>
@@ -279,6 +329,24 @@ jQuery(window).load(function () {
 
 		</div><!-- /container -->
 			  <script src="js/bootstrap_new.js"></script>
+                </div><!-- /content -->
+                
+                <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+                    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                        <ul>
+                            <li><a href="index.html" id="home" data-icon="custom" rel="external" data-ajax="false">Home</a></li>
+                            <li><a href="products.html" id="products" data-icon="custom" rel="external" data-ajax="false">Products</a></li>
+                            <li><a href="" id="camera" data-icon="custom" rel="external" data-ajax="false">Camera</a></li>
+                            <li><a href="" id="scanner" data-icon="custom" rel="external" data-ajax="false">Scanner</a></li>
+                            <li><a href="profile.html" id="profile" data-icon="custom" rel="external" data-ajax="false">Profile</a></li>
+                        </ul>
+                    </div><!-- /navbar -->
+                </div><!-- /footer -->
+                <script type="text/javascript">
+                    $("[data-role=header]").fixedtoolbar({ tapToggle: false });
+                    $("[data-role=footer]").fixedtoolbar({ tapToggle: false });
+                    </script>
+            </div><!-- /page popup -->
  </div> <!-- end of contentWrapper -->
 </div>	<!-- end of siteWrapper -->
 
