@@ -34,6 +34,76 @@ var app = {
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+        //-------------------------------------------------------------------
+        var BarcodeScanner = function() {
+        }
+        
+        //-------------------------------------------------------------------
+        BarcodeScanner.Encode = {
+        TEXT_TYPE:     "TEXT_TYPE",
+        EMAIL_TYPE:    "EMAIL_TYPE",
+        PHONE_TYPE:    "PHONE_TYPE",
+        SMS_TYPE:      "SMS_TYPE",
+        CONTACT_TYPE:  "CONTACT_TYPE",
+        LOCATION_TYPE: "LOCATION_TYPE"
+        }
+        
+        //-------------------------------------------------------------------
+        BarcodeScanner.prototype.scan = function(success, fail, options) {
+            
+            function successWrapper(result) {
+                result.cancelled = (result.cancelled == 1);
+                success.call(null, result);
+            }
+            
+            if (!fail) { fail = function() {}}
+            
+            if (typeof fail != "function")  {
+                console.log("BarcodeScanner.scan failure: failure parameter not a function");
+                return;
+            }
+            
+            if (typeof success != "function") {
+                fail("success callback parameter must be a function");
+                return;
+            }
+            
+            if ( null == options )
+                options = [];
+                
+                return Cordova.exec(successWrapper, fail, "BarcodeScanner", "scan", options);
+                }
+        
+        //-------------------------------------------------------------------
+        BarcodeScanner.prototype.encode = function(type, data, success, fail, options) {
+            if (!fail) { fail = function() {}}
+            
+            if (typeof fail != "function")  {
+                console.log("BarcodeScanner.scan failure: failure parameter not a function");
+                return;
+            }
+            
+            if (typeof success != "function") {
+                fail("success callback parameter must be a function");
+                return;
+            }
+            
+            return Cordova.exec(success, fail, "BarcodeScanner", "encode", [{type: type, data: data, options: options}]);
+        }
+    
+        BarcodeScanner.prototype.setup = function(types) {
+            return Cordova.exec("BarcodeScanner.setup", types);
+        };
+    
+        //Keep at bottom but remove the addConstructor for Cordova 2+
+        if(!window.plugins) window.plugins = {};
+        window.plugins.barcodeScanner = new BarcodeScanner();
+        
+        scanButton = document.getElementById("scan-button");
+        resultSpan = document.getElementById("scan-result");
+        scanButton.addEventListener("click", clickScan, false);
+        createButton.addEventListener("click", clickCreate, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
