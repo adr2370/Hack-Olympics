@@ -32,9 +32,7 @@ var app = {
     //
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        
+onDeviceReady: function() {
         //-------------------------------------------------------------------
         var BarcodeScanner = function() {
         }
@@ -91,6 +89,7 @@ var app = {
             
             return Cordova.exec(success, fail, "BarcodeScanner", "encode", [{type: type, data: data, options: options}]);
         }
+        console.log("END");
     
         BarcodeScanner.prototype.setup = function(types) {
             return Cordova.exec("BarcodeScanner.setup", types);
