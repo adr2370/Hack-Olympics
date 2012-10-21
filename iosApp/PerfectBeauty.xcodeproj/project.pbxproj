@@ -42,47 +42,7 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E1352710E2C1420031B30D /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* Cordova.plist */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		45C4E3011633501400D5C3D2 /* barcodescanner.js in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2D01633501400D5C3D2 /* barcodescanner.js */; };
-		45C4E3021633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D21633501400D5C3D2 /* .gitignore */; };
-		45C4E3031633501400D5C3D2 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2D31633501400D5C3D2 /* Makefile */; };
-		45C4E3041633501400D5C3D2 /* onefile-zxing.py in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D41633501400D5C3D2 /* onefile-zxing.py */; };
 		45C4E3051633501400D5C3D2 /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2D51633501400D5C3D2 /* CDVBarcodeScanner.mm */; };
-		45C4E3061633501400D5C3D2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D61633501400D5C3D2 /* README.md */; };
-		45C4E3071633501400D5C3D2 /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2D71633501400D5C3D2 /* scannerOverlay.xib */; };
-		45C4E3081633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DA1633501400D5C3D2 /* .gitignore */; };
-		45C4E3091633501400D5C3D2 /* desktop-app.js in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2DB1633501400D5C3D2 /* desktop-app.js */; };
-		45C4E30A1633501400D5C3D2 /* code_128-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DD1633501400D5C3D2 /* code_128-1.jpg */; };
-		45C4E30B1633501400D5C3D2 /* code_128-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DE1633501400D5C3D2 /* code_128-1.txt */; };
-		45C4E30C1633501400D5C3D2 /* code_39-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2DF1633501400D5C3D2 /* code_39-1.gif */; };
-		45C4E30D1633501400D5C3D2 /* code_39-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E01633501400D5C3D2 /* code_39-1.txt */; };
-		45C4E30E1633501400D5C3D2 /* data_matrix-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E11633501400D5C3D2 /* data_matrix-1.jpg */; };
-		45C4E30F1633501400D5C3D2 /* data_matrix-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E21633501400D5C3D2 /* data_matrix-1.txt */; };
-		45C4E3101633501400D5C3D2 /* ean_13-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E31633501400D5C3D2 /* ean_13-1.jpg */; };
-		45C4E3111633501400D5C3D2 /* ean_13-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E41633501400D5C3D2 /* ean_13-1.txt */; };
-		45C4E3121633501400D5C3D2 /* ean_8-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E51633501400D5C3D2 /* ean_8-1.gif */; };
-		45C4E3131633501400D5C3D2 /* ean_8-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E61633501400D5C3D2 /* ean_8-1.txt */; };
-		45C4E3141633501400D5C3D2 /* qr_code-large.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E71633501400D5C3D2 /* qr_code-large.gif */; };
-		45C4E3151633501400D5C3D2 /* qr_code-large.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E81633501400D5C3D2 /* qr_code-large.txt */; };
-		45C4E3161633501400D5C3D2 /* qr_code-medium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2E91633501400D5C3D2 /* qr_code-medium.jpg */; };
-		45C4E3171633501400D5C3D2 /* qr_code-medium.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EA1633501400D5C3D2 /* qr_code-medium.txt */; };
-		45C4E3181633501400D5C3D2 /* qr_code-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EB1633501400D5C3D2 /* qr_code-small.png */; };
-		45C4E3191633501400D5C3D2 /* qr_code-small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EC1633501400D5C3D2 /* qr_code-small.txt */; };
-		45C4E31A1633501400D5C3D2 /* upc_a-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2ED1633501400D5C3D2 /* upc_a-1.jpg */; };
-		45C4E31B1633501400D5C3D2 /* upc_a-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EE1633501400D5C3D2 /* upc_a-1.txt */; };
-		45C4E31C1633501400D5C3D2 /* upc_a-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2EF1633501400D5C3D2 /* upc_a-2.jpg */; };
-		45C4E31D1633501400D5C3D2 /* upc_a-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F01633501400D5C3D2 /* upc_a-2.txt */; };
-		45C4E31E1633501400D5C3D2 /* upc_e-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F11633501400D5C3D2 /* upc_e-1.gif */; };
-		45C4E31F1633501400D5C3D2 /* upc_e-1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F21633501400D5C3D2 /* upc_e-1.txt */; };
-		45C4E3201633501400D5C3D2 /* upc_e-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F31633501400D5C3D2 /* upc_e-2.jpg */; };
-		45C4E3211633501400D5C3D2 /* upc_e-2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F41633501400D5C3D2 /* upc_e-2.txt */; };
-		45C4E3221633501400D5C3D2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F51633501400D5C3D2 /* index.html */; };
-		45C4E3231633501400D5C3D2 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2F61633501400D5C3D2 /* Makefile */; };
-		45C4E3241633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2F81633501400D5C3D2 /* .gitignore */; };
-		45C4E3251633501400D5C3D2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FA1633501400D5C3D2 /* .gitignore */; };
-		45C4E3261633501400D5C3D2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FB1633501400D5C3D2 /* index.html */; };
-		45C4E3271633501400D5C3D2 /* phonegap-app.js in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2FC1633501400D5C3D2 /* phonegap-app.js */; };
-		45C4E3281633501400D5C3D2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FD1633501400D5C3D2 /* README.md */; };
-		45C4E3291633501400D5C3D2 /* rebuild-tests-json.py in Resources */ = {isa = PBXBuildFile; fileRef = 45C4E2FE1633501400D5C3D2 /* rebuild-tests-json.py */; };
 		45C4E32A1633501400D5C3D2 /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45C4E2FF1633501400D5C3D2 /* zxing-all-in-one.cpp */; };
 		45C4E32C163353A500D5C3D2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32B163353A500D5C3D2 /* AssetsLibrary.framework */; };
 		45C4E32E163353C100D5C3D2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C4E32D163353C100D5C3D2 /* CoreVideo.framework */; };
@@ -148,47 +108,7 @@
 		30E1352610E2C1420031B30D /* Cordova.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Cordova.plist; path = ../Cordova.plist; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* PerfectBeauty-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PerfectBeauty-Prefix.pch"; sourceTree = "<group>"; };
-		45C4E2D01633501400D5C3D2 /* barcodescanner.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = barcodescanner.js; sourceTree = "<group>"; };
-		45C4E2D21633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		45C4E2D31633501400D5C3D2 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		45C4E2D41633501400D5C3D2 /* onefile-zxing.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "onefile-zxing.py"; sourceTree = "<group>"; };
 		45C4E2D51633501400D5C3D2 /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CDVBarcodeScanner.mm; path = ../BarcodeScanner/CDVBarcodeScanner.mm; sourceTree = "<group>"; };
-		45C4E2D61633501400D5C3D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		45C4E2D71633501400D5C3D2 /* scannerOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scannerOverlay.xib; sourceTree = "<group>"; };
-		45C4E2DA1633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		45C4E2DB1633501400D5C3D2 /* desktop-app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "desktop-app.js"; sourceTree = "<group>"; };
-		45C4E2DD1633501400D5C3D2 /* code_128-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "code_128-1.jpg"; sourceTree = "<group>"; };
-		45C4E2DE1633501400D5C3D2 /* code_128-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "code_128-1.txt"; sourceTree = "<group>"; };
-		45C4E2DF1633501400D5C3D2 /* code_39-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "code_39-1.gif"; sourceTree = "<group>"; };
-		45C4E2E01633501400D5C3D2 /* code_39-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "code_39-1.txt"; sourceTree = "<group>"; };
-		45C4E2E11633501400D5C3D2 /* data_matrix-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "data_matrix-1.jpg"; sourceTree = "<group>"; };
-		45C4E2E21633501400D5C3D2 /* data_matrix-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "data_matrix-1.txt"; sourceTree = "<group>"; };
-		45C4E2E31633501400D5C3D2 /* ean_13-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ean_13-1.jpg"; sourceTree = "<group>"; };
-		45C4E2E41633501400D5C3D2 /* ean_13-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ean_13-1.txt"; sourceTree = "<group>"; };
-		45C4E2E51633501400D5C3D2 /* ean_8-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ean_8-1.gif"; sourceTree = "<group>"; };
-		45C4E2E61633501400D5C3D2 /* ean_8-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ean_8-1.txt"; sourceTree = "<group>"; };
-		45C4E2E71633501400D5C3D2 /* qr_code-large.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "qr_code-large.gif"; sourceTree = "<group>"; };
-		45C4E2E81633501400D5C3D2 /* qr_code-large.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "qr_code-large.txt"; sourceTree = "<group>"; };
-		45C4E2E91633501400D5C3D2 /* qr_code-medium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "qr_code-medium.jpg"; sourceTree = "<group>"; };
-		45C4E2EA1633501400D5C3D2 /* qr_code-medium.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "qr_code-medium.txt"; sourceTree = "<group>"; };
-		45C4E2EB1633501400D5C3D2 /* qr_code-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_code-small.png"; sourceTree = "<group>"; };
-		45C4E2EC1633501400D5C3D2 /* qr_code-small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "qr_code-small.txt"; sourceTree = "<group>"; };
-		45C4E2ED1633501400D5C3D2 /* upc_a-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "upc_a-1.jpg"; sourceTree = "<group>"; };
-		45C4E2EE1633501400D5C3D2 /* upc_a-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_a-1.txt"; sourceTree = "<group>"; };
-		45C4E2EF1633501400D5C3D2 /* upc_a-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "upc_a-2.jpg"; sourceTree = "<group>"; };
-		45C4E2F01633501400D5C3D2 /* upc_a-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_a-2.txt"; sourceTree = "<group>"; };
-		45C4E2F11633501400D5C3D2 /* upc_e-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "upc_e-1.gif"; sourceTree = "<group>"; };
-		45C4E2F21633501400D5C3D2 /* upc_e-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_e-1.txt"; sourceTree = "<group>"; };
-		45C4E2F31633501400D5C3D2 /* upc_e-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "upc_e-2.jpg"; sourceTree = "<group>"; };
-		45C4E2F41633501400D5C3D2 /* upc_e-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upc_e-2.txt"; sourceTree = "<group>"; };
-		45C4E2F51633501400D5C3D2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		45C4E2F61633501400D5C3D2 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		45C4E2F81633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		45C4E2FA1633501400D5C3D2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		45C4E2FB1633501400D5C3D2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		45C4E2FC1633501400D5C3D2 /* phonegap-app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "phonegap-app.js"; sourceTree = "<group>"; };
-		45C4E2FD1633501400D5C3D2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		45C4E2FE1633501400D5C3D2 /* rebuild-tests-json.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "rebuild-tests-json.py"; sourceTree = "<group>"; };
 		45C4E2FF1633501400D5C3D2 /* zxing-all-in-one.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "zxing-all-in-one.cpp"; path = "../BarcodeScanner/zxing-all-in-one.cpp"; sourceTree = "<group>"; };
 		45C4E3001633501400D5C3D2 /* zxing-all-in-one.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "zxing-all-in-one.h"; path = "../BarcodeScanner/zxing-all-in-one.h"; sourceTree = "<group>"; };
 		45C4E32B163353A500D5C3D2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -346,7 +266,6 @@
 				45C4E2FF1633501400D5C3D2 /* zxing-all-in-one.cpp */,
 				45C4E3001633501400D5C3D2 /* zxing-all-in-one.h */,
 				45C4E2D51633501400D5C3D2 /* CDVBarcodeScanner.mm */,
-				45C4E2CF1633501400D5C3D2 /* BarcodeScanner */,
 			);
 			name = Plugins;
 			path = PerfectBeauty/Plugins;
@@ -389,102 +308,6 @@
 				30A0434614DC770100060A13 /* Localizable.strings */,
 			);
 			path = se.lproj;
-			sourceTree = "<group>";
-		};
-		45C4E2CF1633501400D5C3D2 /* BarcodeScanner */ = {
-			isa = PBXGroup;
-			children = (
-				45C4E2D01633501400D5C3D2 /* barcodescanner.js */,
-				45C4E2D11633501400D5C3D2 /* build */,
-				45C4E2D61633501400D5C3D2 /* README.md */,
-				45C4E2D71633501400D5C3D2 /* scannerOverlay.xib */,
-				45C4E2D81633501400D5C3D2 /* test */,
-			);
-			name = BarcodeScanner;
-			path = ../BarcodeScanner;
-			sourceTree = "<group>";
-		};
-		45C4E2D11633501400D5C3D2 /* build */ = {
-			isa = PBXGroup;
-			children = (
-				45C4E2D21633501400D5C3D2 /* .gitignore */,
-				45C4E2D31633501400D5C3D2 /* Makefile */,
-				45C4E2D41633501400D5C3D2 /* onefile-zxing.py */,
-			);
-			path = build;
-			sourceTree = "<group>";
-		};
-		45C4E2D81633501400D5C3D2 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				45C4E2D91633501400D5C3D2 /* desktop-app */,
-				45C4E2F61633501400D5C3D2 /* Makefile */,
-				45C4E2F71633501400D5C3D2 /* phonegap-app */,
-				45C4E2FD1633501400D5C3D2 /* README.md */,
-				45C4E2FE1633501400D5C3D2 /* rebuild-tests-json.py */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		45C4E2D91633501400D5C3D2 /* desktop-app */ = {
-			isa = PBXGroup;
-			children = (
-				45C4E2DA1633501400D5C3D2 /* .gitignore */,
-				45C4E2DB1633501400D5C3D2 /* desktop-app.js */,
-				45C4E2DC1633501400D5C3D2 /* images */,
-				45C4E2F51633501400D5C3D2 /* index.html */,
-			);
-			path = "desktop-app";
-			sourceTree = "<group>";
-		};
-		45C4E2DC1633501400D5C3D2 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				45C4E2DD1633501400D5C3D2 /* code_128-1.jpg */,
-				45C4E2DE1633501400D5C3D2 /* code_128-1.txt */,
-				45C4E2DF1633501400D5C3D2 /* code_39-1.gif */,
-				45C4E2E01633501400D5C3D2 /* code_39-1.txt */,
-				45C4E2E11633501400D5C3D2 /* data_matrix-1.jpg */,
-				45C4E2E21633501400D5C3D2 /* data_matrix-1.txt */,
-				45C4E2E31633501400D5C3D2 /* ean_13-1.jpg */,
-				45C4E2E41633501400D5C3D2 /* ean_13-1.txt */,
-				45C4E2E51633501400D5C3D2 /* ean_8-1.gif */,
-				45C4E2E61633501400D5C3D2 /* ean_8-1.txt */,
-				45C4E2E71633501400D5C3D2 /* qr_code-large.gif */,
-				45C4E2E81633501400D5C3D2 /* qr_code-large.txt */,
-				45C4E2E91633501400D5C3D2 /* qr_code-medium.jpg */,
-				45C4E2EA1633501400D5C3D2 /* qr_code-medium.txt */,
-				45C4E2EB1633501400D5C3D2 /* qr_code-small.png */,
-				45C4E2EC1633501400D5C3D2 /* qr_code-small.txt */,
-				45C4E2ED1633501400D5C3D2 /* upc_a-1.jpg */,
-				45C4E2EE1633501400D5C3D2 /* upc_a-1.txt */,
-				45C4E2EF1633501400D5C3D2 /* upc_a-2.jpg */,
-				45C4E2F01633501400D5C3D2 /* upc_a-2.txt */,
-				45C4E2F11633501400D5C3D2 /* upc_e-1.gif */,
-				45C4E2F21633501400D5C3D2 /* upc_e-1.txt */,
-				45C4E2F31633501400D5C3D2 /* upc_e-2.jpg */,
-				45C4E2F41633501400D5C3D2 /* upc_e-2.txt */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		45C4E2F71633501400D5C3D2 /* phonegap-app */ = {
-			isa = PBXGroup;
-			children = (
-				45C4E2F81633501400D5C3D2 /* .gitignore */,
-				45C4E2F91633501400D5C3D2 /* images */,
-				45C4E2FB1633501400D5C3D2 /* index.html */,
-				45C4E2FC1633501400D5C3D2 /* phonegap-app.js */,
-			);
-			path = "phonegap-app";
-			sourceTree = "<group>";
-		};
-		45C4E2F91633501400D5C3D2 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				45C4E2FA1633501400D5C3D2 /* .gitignore */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -578,41 +401,6 @@
 				3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */,
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
-				45C4E3021633501400D5C3D2 /* .gitignore in Resources */,
-				45C4E3041633501400D5C3D2 /* onefile-zxing.py in Resources */,
-				45C4E3061633501400D5C3D2 /* README.md in Resources */,
-				45C4E3071633501400D5C3D2 /* scannerOverlay.xib in Resources */,
-				45C4E3081633501400D5C3D2 /* .gitignore in Resources */,
-				45C4E30A1633501400D5C3D2 /* code_128-1.jpg in Resources */,
-				45C4E30B1633501400D5C3D2 /* code_128-1.txt in Resources */,
-				45C4E30C1633501400D5C3D2 /* code_39-1.gif in Resources */,
-				45C4E30D1633501400D5C3D2 /* code_39-1.txt in Resources */,
-				45C4E30E1633501400D5C3D2 /* data_matrix-1.jpg in Resources */,
-				45C4E30F1633501400D5C3D2 /* data_matrix-1.txt in Resources */,
-				45C4E3101633501400D5C3D2 /* ean_13-1.jpg in Resources */,
-				45C4E3111633501400D5C3D2 /* ean_13-1.txt in Resources */,
-				45C4E3121633501400D5C3D2 /* ean_8-1.gif in Resources */,
-				45C4E3131633501400D5C3D2 /* ean_8-1.txt in Resources */,
-				45C4E3141633501400D5C3D2 /* qr_code-large.gif in Resources */,
-				45C4E3151633501400D5C3D2 /* qr_code-large.txt in Resources */,
-				45C4E3161633501400D5C3D2 /* qr_code-medium.jpg in Resources */,
-				45C4E3171633501400D5C3D2 /* qr_code-medium.txt in Resources */,
-				45C4E3181633501400D5C3D2 /* qr_code-small.png in Resources */,
-				45C4E3191633501400D5C3D2 /* qr_code-small.txt in Resources */,
-				45C4E31A1633501400D5C3D2 /* upc_a-1.jpg in Resources */,
-				45C4E31B1633501400D5C3D2 /* upc_a-1.txt in Resources */,
-				45C4E31C1633501400D5C3D2 /* upc_a-2.jpg in Resources */,
-				45C4E31D1633501400D5C3D2 /* upc_a-2.txt in Resources */,
-				45C4E31E1633501400D5C3D2 /* upc_e-1.gif in Resources */,
-				45C4E31F1633501400D5C3D2 /* upc_e-1.txt in Resources */,
-				45C4E3201633501400D5C3D2 /* upc_e-2.jpg in Resources */,
-				45C4E3211633501400D5C3D2 /* upc_e-2.txt in Resources */,
-				45C4E3221633501400D5C3D2 /* index.html in Resources */,
-				45C4E3241633501400D5C3D2 /* .gitignore in Resources */,
-				45C4E3251633501400D5C3D2 /* .gitignore in Resources */,
-				45C4E3261633501400D5C3D2 /* index.html in Resources */,
-				45C4E3281633501400D5C3D2 /* README.md in Resources */,
-				45C4E3291633501400D5C3D2 /* rebuild-tests-json.py in Resources */,
 				45D38CCD16336EDA008E54EE /* BarcodeOverlay.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,12 +432,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				45C4E3011633501400D5C3D2 /* barcodescanner.js in Sources */,
-				45C4E3031633501400D5C3D2 /* Makefile in Sources */,
 				45C4E3051633501400D5C3D2 /* CDVBarcodeScanner.mm in Sources */,
-				45C4E3091633501400D5C3D2 /* desktop-app.js in Sources */,
-				45C4E3231633501400D5C3D2 /* Makefile in Sources */,
-				45C4E3271633501400D5C3D2 /* phonegap-app.js in Sources */,
 				45C4E32A1633501400D5C3D2 /* zxing-all-in-one.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
