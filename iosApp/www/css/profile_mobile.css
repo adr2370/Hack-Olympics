@@ -21,3 +21,11 @@
 .r-desp {
 	margin-bottom: 10px;
 }
+
+#name, #email {
+	font-size: 12px;
+}
+.number {
+	font-weight: bold;
+	font-size: 9px;
+}
