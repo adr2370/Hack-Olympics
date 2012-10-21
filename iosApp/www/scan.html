@@ -27,19 +27,42 @@
     </head>
     <body>
         <div>
-            <div style="
-                position: absolute;
-                left: 31px;
-                top: 28px;
-                font-size: 30px;
-                "><a href="products.html">Products Page</a><br/>
-                <a href="scan.html">Scanning Page</a>
-            </div>
+            <button id="scan-button">scan something</button>
+            <p>scanned: <span id="scan-result">n/a</span>
         </div>
         <script type="text/javascript" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+		    <script type="text/javascript">
+		function clickScan() {
+            window.plugins.barcodeScanner.scan(scannerSuccess, scannerFailure, ["BarcodeOverlay"]);
+		}
+		function scannerSuccess(result) {
+		    console.log("scannerSuccess: result: " + result);
+		    resultSpan.innerText = result.text;
+            var url = "http://test.yourperfectbeauty.com/searchByUPC.php",
+            params = "upc="+result.text,
+            result;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST",url,true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.onreadystatechange = function(){
+                console.log(xmlhttp.readyState+" "+xmlhttp.status);
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    result = xmlhttp.responseText;
+                    resultObj = eval('('+result+')');
+                    resultSpan.innerText = resultObj['title'];
+                }
+            };
+            xmlhttp.send(params);
+		}
+		function scannerFailure(message) {
+		    console.log("scannerFailure: message: " + message)
+		    resultSpan.innerText = "failure: " + JSON.stringify(message)
+		}
+		    </script>
     </body>
 </html>
