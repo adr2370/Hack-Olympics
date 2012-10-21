@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Perfect Beauty
+		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content=""><!-- Le styles -->
+		<!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">-->
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</script>
+		<script type="text/javascript" src="js/jquery.form.js"></script>
+		<link href="css/header.css" rel="stylesheet" type="text/css">
+		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+		<link href="css/index.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js">
+</script>		
+		<script type="text/javascript">if (window.location.hash == '#_=_')window.location.hash = '';</script>
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<style type="text/css">
+		  .typeahead.dropdown-menu {
+		    overflow: hidden;
+		  }
+		</style>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+
+		<!--[if gte IE 9]>
+		  <style type="text/css">
+		    .gradient {
+		       filter: none;
+		    }
+		  </style>
+		<![endif]-->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-34153641-1']);
+		  _gaq.push(['_setDomainName', 'yourperfectbeauty.com']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+	
+	<body>
+		<div id="siteWrapper" style="margin-left:2px;">
+		<div id="contentWrapper">
+
+            <script type="text/javascript">
+                var userid=10000000; // FIX THIS WHEN YOU FIGURE OUT USER ID
+                var split = location.search.replace('?', '').split('=');
+                var pid=split[1];
+var similarProducts=1;
+	var prevC;
+		$(function(){
+          
+				//eids = $('#eidsForLoadMore').text();
+			$(window).scroll(function(){
+			  if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+			   	  var c,i = $('.productsContainer').children('.eachProduct').length;
+			   	  c = parseInt(i/16);
+			   	  if(prevC!=c && c > 0)
+			   	  {	
+			   	  	prevC = c;
+			   	  	loadMoreProduct(c,'http://test.yourperfectbeauty.com/img','https://d11lxttoebl3uu.cloudfront.net/upload/upload/product',userid,similarProducts);
+			  	  }	
+			  }
+			});   
+		});
+
+
+	function defaultsVal(val){
+		switch(val)
+		{
+			case 1: 	$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						
+					break;
+
+			case 2: 	$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						
+					break;
+
+			case 3: 	$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						
+					break;
+
+			case 4: 	$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+					
+					break;
+
+			case 5: 	$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+						$('.fiveStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+					
+					break;
+		}
+
+	}
+
+
+	function oneHover(ids){
+		
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fiveStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+	}
+	function oneHoverOut(ids,val){
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		defaultsVal(val);
+	}
+	function twoHover(ids){
+		
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fiveStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+	
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+	}
+	function twoHoverOut(ids,val){
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		defaultsVal(val);
+	}
+	function threeHover(ids){
+		
+		$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fiveStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+	
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+	}
+	function threeHoverOut(ids,val){
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		defaultsVal(val);
+	}
+	function fourHover(ids){
+		$('.fiveStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		
+	}
+	function fourHoverOut(ids,val){
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		defaultsVal(val);
+	}
+	function fiveHover(ids){
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+		$('.fiveStar img').attr('src','http://test.yourperfectbeauty.com/img/yellowStar.png');
+	}
+	function fiveHoverOut(ids,val){
+		$('.oneStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.twoStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.threeStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fourStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		$('.fiveStar img').attr('src','http://test.yourperfectbeauty.com/img/whiteStar.png');
+		defaultsVal(val);
+	}
+</script>
+            <div id="mainWrapper" style="margin-top:-10px;">
+                
+                <div class="mainBlock leftBlock">
+                        <div id="product">
+							<div class="singleProductTitle">
+                                <div style="width: 310px;margin-bottom: 5px;float: left;" id="title"></div>
+							</div>
+                            <div class="productRating singleProductRatings" style="clear: both;width:320px;">
+                                
+                                <ul class="starRatings">
+                                    <li class="oneStar"><img src="http://test.yourperfectbeauty.com/img/whiteStar.png"/></li>
+                                    <li class="twoStar"><img src="http://test.yourperfectbeauty.com/img/whiteStar.png"/></li>
+                                    <li class="threeStar"><img src="http://test.yourperfectbeauty.com/img/whiteStar.png"/></li>
+                                    <li class="fourStar"><img src="http://test.yourperfectbeauty.com/img/whiteStar.png"/></li>
+                                    <li class="fiveStar"><img src="http://test.yourperfectbeauty.com/img/whiteStar.png"/></li>
+                                    
+                                </ul>
+                                
+                                <div class="ratingsAvg" style="color:#000;">
+                                    Default text
+                                </div>
+                                
+                            </div>
+                            <div class="singleProductImage"><a href="" target="_blank"><img id="singleProductImage" src="" style="max-width:150px; max-height:150px; display: block; margin-left: auto; margin-right: auto;"/></a></div>
+                            <div class="singleProductDesc" style="width:310px;"></div>
+                            <div class="singleProductCommentForm" style="width:325px;">
+                                <span>Enter Your Review: </span>
+                                <textarea id="singleProductComment" rows="5" width="325px;"></textarea>
+                                <div class="singleProductBuyNow"><a id="singleProductLink" href="" target="_blank" class="hiddenLink">Buy It Here</a></div>
+                            </div>
+                            
+                            <div class="singleProductSubmitComment" style="left: 143px;">
+                                Submit Review
+                            </div>
+                            
+                            <div class="productCommentBox">
+                            </div>
+                            <script type="text/javascript" src="js/main.js"></script>
+                            <script type="text/javascript">
+                                var url="http://test.yourperfectbeauty.com/getSingleProduct.php",
+                                params="pid="+pid,
+                                result, resultObj;
+                                xmlhttp.open("POST",url,true);
+                                xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                                xmlhttp.onreadystatechange = function(){
+                                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                                    {
+                                        result = xmlhttp.responseText;
+                                        resultObj = eval('('+result+')');
+                                        $("#title").html(resultObj['name']);
+                                        if(resultObj['average']!=0) {
+                                            defaultsVal(parseInt(resultObj['average']));
+                                            $(".ratingsAvg").html(resultObj['numRatings']+" Ratings");
+                                        } else {
+                                            $(".ratingsAvg").html("No Ratings");
+                                        }
+                                        $("#singleProductLink").attr("href","http://www.amazon.com/gp/product/"+pid+"/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN="+pid+"&linkCode=as2&tag=teststarwebs-20");
+                                        $(".singleProductDesc").html(resultObj['description']);
+                                        $("#singleProductImage").attr("src","https://d11lxttoebl3uu.cloudfront.net/upload/upload/product/275"+resultObj['image']);
+                                        moreComment(''+pid,15,15,15);
+                                    }
+                                };
+                                xmlhttp.send(params);
+                            </script>
+                        </div>
+                </div> <!-- end of leftBlock -->
+        </div><!-- /container -->
+			  <script src="js/bootstrap_new.js"></script>
+ </div> <!-- end of contentWrapper -->
+</div>	<!-- end of siteWrapper -->
+
+	</body>
+</html>

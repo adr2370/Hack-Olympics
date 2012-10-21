@@ -89,7 +89,6 @@ onDeviceReady: function() {
             
             return Cordova.exec(success, fail, "BarcodeScanner", "encode", [{type: type, data: data, options: options}]);
         }
-        console.log("END");
     
         BarcodeScanner.prototype.setup = function(types) {
             return Cordova.exec("BarcodeScanner.setup", types);

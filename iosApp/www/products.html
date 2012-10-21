@@ -277,42 +277,8 @@ jQuery(window).load(function () {
 			
 						
 
-			</div> <!-- end of rightBlock -->
 		</div><!-- /container -->
 			  <script src="js/bootstrap_new.js"></script>
-<script type="text/javascript">
-
-	function giveRatings(ids,value){
-		var url="productController.php",
-			uid=userid,
-			params="gr=true&pid="+ids+"&value="+value+"&uid="+uid,
-			result;
-			
-		xmlhttp.open("POST",url,true);
-		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-		xmlhttp.onreadystatechange = function(){
-			if(xmlhttp.readyState == 4 && xmlhttp.status==200)
-			{
-				result2 = xmlhttp.responseText;
-				resultObj = eval('('+result2+')');
-				result=resultObj['avg'];
-				number=resultObj['num'];
-				$('#product'+ids+' .ratingsAvg').text(number+' Ratings');
-				$('#product'+ids+' li.oneStar img').attr('onmouseout','oneHoverOut("'+ids+'",'+parseInt(result)+')');
-				$('#product'+ids+' li.twoStar img').attr('onmouseout','twoHoverOut("'+ids+'",'+parseInt(result)+')');
-				$('#product'+ids+' li.threeStar img').attr('onmouseout','threeHoverOut("'+ids+'",'+parseInt(result)+')');
-				$('#product'+ids+' li.fourStar img').attr('onmouseout','fourHoverOut("'+ids+'",'+parseInt(result)+')');
-				$('#product'+ids+' li.fiveStar img').attr('onmouseout','fiveHoverOut("'+ids+'",'+parseInt(result)+')');
-				oneHoverOut(ids,parseInt(result));
-			}
-		};
-		xmlhttp.send(params);
-	}
-	
-
-</script>
-
-
  </div> <!-- end of contentWrapper -->
 </div>	<!-- end of siteWrapper -->
 

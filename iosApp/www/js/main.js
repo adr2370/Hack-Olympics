@@ -445,7 +445,7 @@ function appendPost(statusObj,loadCounter,i,path,userID){
 				updatesPost+= '<img src="https://d11lxttoebl3uu.cloudfront.net/upload/upload/'+eachUserID+'/'+imageObj[j]+'" />';
 			}
 			for(j=0;products&&j<getObjSize(products);j++) {
-				updatesPost+= '<a href="productDetail.php?pid='+products[j]+'"><img src="https://d11lxttoebl3uu.cloudfront.net/upload/upload/product/275'+products[j]+'" style="height:250px;" /></a>';
+				updatesPost+= '<a href="productDetail.html?pid='+products[j]+'"><img src="https://d11lxttoebl3uu.cloudfront.net/upload/upload/product/275'+products[j]+'" style="height:250px;" /></a>';
 			}
 			updatesPost+='</div></div>';
 		} else {
@@ -650,7 +650,7 @@ function moreComment(prdId,multiplier,limit,divisor){
 	var baseCounter = $('#product'+prdId+' .productCommentBox').children('.eachComment').length;
 	var counter = parseInt(baseCounter/divisor);
 	
-	var url="productController.php",
+	var url="http://test.yourperfectbeauty.com/productController.php",
 		params="mc=true&pid="+prdId+"&counter="+counter+"&multiplier="+multiplier+"&limit="+limit,
 		result, resultObj, size, html,i, html1;
 
@@ -673,10 +673,14 @@ function moreComment(prdId,multiplier,limit,divisor){
 						resultObj[i]['comment']=resultObj[i]['comment'].replace("\\\\n","<br/>");
 						resultObj[i]['comment']=resultObj[i]['comment'].replace("\\n","<br/>");
 						resultObj[i]['comment']=resultObj[i]['comment'].replace("\\r","<br/>");
+                        var pic=resultObj[i]['pic'];
+                        if(pic.charAt(0)!='h') {
+                            pic="http://beta.yourperfectbeauty.com/"+pic;
+                        }
 						if(limit==15)
-							html= "<div class='eachComment'><div class='commentIntLeft'><img src='img/thumbsUp.png' style='width: 40px;top: -10px;left: 5px;position: relative;cursor:pointer;' onclick='giveCommentCompliment("+resultObj[i]['commentid']+")'><div id='compliments"+resultObj[i]['commentid']+"' style='float: left;font-size: 10px;position: relative;top: -18px;text-align: center;width: 50px;cursor:default;'>"+resultObj[i]['compliments']+" Up</div></div><div class='commentIntLeft'><img src='"+resultObj[i]['pic']+"' /></div><div class='commentIntRight bigComment'>"+resultObj[i]['comment']+"</div></div>";
+							html= "<div class='eachComment'><div class='commentIntLeft'><img src='"+pic+"' /></div><div class='commentIntRight bigComment'>"+resultObj[i]['comment']+"</div></div>";
 						else
-							html= "<div class='eachComment'><div class='commentIntLeft'><img src='"+resultObj[i]['pic']+"' /></div><div class='commentIntRight'>"+resultObj[i]['comment']+"</div></div>";
+							html= "<div class='eachComment'><div class='commentIntLeft'><img src='"+pic+"' /></div><div class='commentIntRight' style='width:277px'>"+resultObj[i]['comment']+"</div></div>";
 						$(html).hide().appendTo('#product'+prdId+' .productCommentBox').slideDown(500);;
 					
 					}
@@ -740,8 +744,8 @@ function loadMoreProduct(counter,imgPath,productImgPath,uid,whichType){
 				html5 = "<li class='fourStar'><img src='"+imgPath+"/whiteStar.png'/></li>";
 				html6 = "<li class='fiveStar'><img src='"+imgPath+"/whiteStar.png'/></li></ul>";
 				
-				html7 = "</div><div class='productImg'><a href='productDetail.php?pid="+pid+"'><img src='"+productImgPath+"/275"+product['image']+"' /></a></div>";
-				html8 = "<div class='productTitle'><a href='productDetail.php?pid="+pid+"'>"+product['name']+"</a></div><div class='productCommentBox'>";
+				html7 = "</div><div class='productImg'><a href='productDetail.html?pid="+pid+"'><img src='"+productImgPath+"/275"+product['image']+"' /></a></div>";
+				html8 = "<div class='productTitle'><a href='productDetail.html?pid="+pid+"'>"+product['name']+"</a></div><div class='productCommentBox'>";
                 
                 $('.productsContainer').append(html1+html2+html3+html4+html5+html6+html7+html8+"</div>");
 							
@@ -794,7 +798,7 @@ function singleProductSubmitComment(comment,uid,pid){
 		newComment=newComment.replace("\\\\n","<br/>");
 		newComment=newComment.replace("\\n","<br/>");
 		newComment=newComment.replace("\\r","<br/>");
-		html3 = "<div class='commentIntRight bigComment' style='width:805px;'>"+newComment+"<div style='top:0px;' class='deleteComment' id='deleteComment"+resultObj['cid']+"' onclick='deleteProductComment("+resultObj['cid']+")'>Delete Comment</div></div></div>";
+		html3 = "<div class='commentIntRight bigComment' style='width:227px;'>"+newComment+"<div style='top:0px;' class='deleteComment' id='deleteComment"+resultObj['cid']+"' onclick='deleteProductComment("+resultObj['cid']+")'>Delete Comment</div></div></div>";
 
 		$(html1+html2+html3).hide().prependTo('.productCommentBox').slideDown(500);
 

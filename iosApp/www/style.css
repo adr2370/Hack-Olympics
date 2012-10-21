@@ -984,10 +984,10 @@ ul.starRatings li img{
 .singleProductImage{
     border: 1px solid #DDDDDD;
     float: left;
-    height: 275px;
+    height: 150px;
     margin-bottom: 12px;
     margin-right: 12px;
-    width: 275px;
+    width: 150px;
 }
 .singleProductDesc{
 
@@ -996,7 +996,8 @@ ul.starRatings li img{
 .bigComment{
     height: auto;
     min-height: 48px;
-    width: 755px;
+    width: 260px;
+    margin-bottom: 5px;
 }
 .singleProductCommentForm{
     clear: both;
@@ -1004,7 +1005,7 @@ ul.starRatings li img{
 	margin-bottom: -20px;
 }
 #singleProductComment{
-	width: 850px;
+	width: 300px;
 	resize: vertical;
 }
 .singleProductBuyNow{
