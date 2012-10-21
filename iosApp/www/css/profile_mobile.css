@@ -1,0 +1,19 @@
+.ui-body {
+	margin-bottom: 10px;
+}
+#image {
+	float: left;
+	margin-right: 10px;
+}
+#points, #compliments, #friends {
+	width: 30%;
+	float: left;
+	text-align: center;
+}
+#points, #compliments {
+	border-right: 1px solid #aaa;
+}
+
+.r-desp {
+	margin-bottom: 10px;
+}
