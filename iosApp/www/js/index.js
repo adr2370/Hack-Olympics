@@ -103,7 +103,6 @@ onDeviceReady: function() {
         $("#scanner").removeClass("ui-btn-active");
             window.plugins.barcodeScanner.scan(function(result) {
                                                console.log("scannerSuccess: result: " + result);
-                                               resultSpan.innerText = result.text;
                                                var url = "http://test.yourperfectbeauty.com/searchByUPC.php",
                                                params = "upc="+result.text,
                                                result;
