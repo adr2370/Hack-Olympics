@@ -901,7 +901,7 @@ textarea.routineTextArea{
 .moreComment{
     cursor: pointer;
     font-size: 11px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     text-align: right;
 }
 

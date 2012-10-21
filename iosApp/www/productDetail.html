@@ -9,23 +9,78 @@
 		<meta name="description" content="">
 		<meta name="author" content=""><!-- Le styles -->
 		<!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">-->
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-</script>
-		<script type="text/javascript" src="js/jquery.form.js"></script>
-		<link href="css/header.css" rel="stylesheet" type="text/css">
-		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
-		<link href="css/index.css" rel="stylesheet" type="text/css">
-		
-		<script type="text/javascript" src="bootstrap/js/bootstrap.js">
-</script>		
-		<script type="text/javascript">if (window.location.hash == '#_=_')window.location.hash = '';</script>
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+            
+            <link rel="stylesheet" href="css/reset.css">
+            <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+            <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+            <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+            <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+            
+            <link href="style.css" rel="stylesheet" type="text/css">
+            <script type="text/javascript" src="js/jquery.form.js"></script>
+            <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+            <link href="css/header.css" rel="stylesheet" type="text/css">
+            <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+            <!--<link href="css/index.css" rel="stylesheet" type="text/css">-->
+            <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
+            
 		<style type="text/css">
 		  .typeahead.dropdown-menu {
 		    overflow: hidden;
 		  }
 		</style>
+            <style>
+                .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+                .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+                #home .ui-icon { background:  url(img/28-star.png) 50% 50% no-repeat; background-size: 26px 26px; }
+                #products .ui-icon { background:  url(img/80-shopping-cart.png) 50% 50% no-repeat; background-size: 26px 19px;  }
+                #camera .ui-icon { background:  url(img/86-camera.png) 50% 50% no-repeat;  background-size: 24px 18px; }
+                #scanner .ui-icon { background:  url(img/195-barcode.png) 50% 50% no-repeat;  background-size: 24px 18px; }
+                #profile .ui-icon { background:  url(img/111-user.png) 50% 50% no-repeat;  background-size: 24px 21px; }
+                
+                
+                ul#homeFeed > li{
+                    border-radius: 10px;
+                    border:1px solid #ccc;
+                    margin-bottom: 20px;
+                    overflow:hidden;
+                    box-shadow: 0px 1px 5px #333;
+                    font: 14px Helvetica,Arial;
+                    text-transform: none;
+                }
+                ul#homeFeed img{
+                    width: 100%;
+                    height: auto;
+                }
+                
+                .homeFeedName, .homeFeedStatus {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .homeFeedName {
+                    color:#ccc;
+                    font-weight: bold;
+                    padding-top: 5px;
+                }
+                .homeFeedStatus {
+                    margin-bottom: 10px;
+                    font-size: 16px
+                }
+                .homeFeedComments {
+                    background-color: #ccc;
+                    padding: 5px 10px;
+                }
+                
+                .homeFeedComments a {
+                    text-decoration: none;
+                    display: block;
+                    
+                }
+                
+                .complement {
+                    
+                }
+                </style>
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -57,7 +112,7 @@
 	</head>
 	
 	<body>
-		<div id="siteWrapper" style="margin-left:2px;">
+		<div id="siteWrapper">
 		<div id="contentWrapper">
 
             <script type="text/javascript">
@@ -194,14 +249,19 @@ var similarProducts=1;
 		defaultsVal(val);
 	}
 </script>
-            <div id="mainWrapper" style="margin-top:-10px;">
+            <div data-role="page" id="view">
+                
+                <div data-role="header" data-position="fixed">
+                    <h1 id="title" style="width:320px;margin-left:0px;margin-right:0px;text-align:center;">Product Details</h1>
+                </div><!-- /header -->
+                
+                <div data-role="content">
+                    
+            <div id="mainWrapper" style="margin-top:-15px; width:320px; margin-left:-13px;">
                 
                 <div class="mainBlock leftBlock">
                         <div id="product">
-							<div class="singleProductTitle">
-                                <div style="width: 310px;margin-bottom: 5px;float: left;" id="title"></div>
-							</div>
-                            <div class="productRating singleProductRatings" style="clear: both;width:320px;">
+                            <div class="productRating singleProductRatings" style="clear: both;width:316px;background-color:#444;margin-top:-18px;">
                                 
                                 <ul class="starRatings">
                                     <li class="oneStar"><img src="http://test.yourperfectbeauty.com/img/whiteStar.png"/></li>
@@ -212,7 +272,7 @@ var similarProducts=1;
                                     
                                 </ul>
                                 
-                                <div class="ratingsAvg" style="color:#000;">
+                                <div class="ratingsAvg" style="color:#FFF;font-size: 18px;margin-top: -23px;">
                                     Default text
                                 </div>
                                 
@@ -221,11 +281,11 @@ var similarProducts=1;
                             <div class="singleProductDesc" style="width:310px;"></div>
                             <div class="singleProductCommentForm" style="width:325px;">
                                 <span>Enter Your Review: </span>
-                                <textarea id="singleProductComment" rows="5" width="325px;"></textarea>
-                                <div class="singleProductBuyNow"><a id="singleProductLink" href="" target="_blank" class="hiddenLink">Buy It Here</a></div>
+                                <textarea id="singleProductComment" rows="5" width="325px;" style="margin-left:8px;"></textarea>
+                                <div class="singleProductBuyNow" style="font-size:18px;"><a id="singleProductLink" href="" target="_blank" class="hiddenLink">Buy It Here</a></div>
                             </div>
                             
-                            <div class="singleProductSubmitComment" style="left: 143px;">
+                            <div class="singleProductSubmitComment" style="left: 143px;font-size:18px;">
                                 Submit Review
                             </div>
                             
@@ -253,7 +313,7 @@ var similarProducts=1;
                                         $("#singleProductLink").attr("href","http://www.amazon.com/gp/product/"+pid+"/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN="+pid+"&linkCode=as2&tag=teststarwebs-20");
                                         $(".singleProductDesc").html(resultObj['description']);
                                         $("#singleProductImage").attr("src","https://d11lxttoebl3uu.cloudfront.net/upload/upload/product/275"+resultObj['image']);
-                                        moreComment(''+pid,15,15,15);
+                                        moreComment(pid,15,15,15);
                                     }
                                 };
                                 xmlhttp.send(params);
@@ -262,6 +322,26 @@ var similarProducts=1;
                 </div> <!-- end of leftBlock -->
         </div><!-- /container -->
 			  <script src="js/bootstrap_new.js"></script>
+                    
+                    
+                </div><!-- /content -->
+                
+                <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+                    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                        <ul>
+                            <li><a href="index.html" id="home" data-icon="custom" rel="external" data-ajax="false">Home</a></li>
+                            <li><a href="products.html" id="products" data-icon="custom" rel="external" data-ajax="false">Products</a></li>
+                            <li><a href="" id="camera" data-icon="custom" rel="external" data-ajax="false">Camera</a></li>
+                            <li><a href="" id="scanner" data-icon="custom" rel="external" data-ajax="false">Scanner</a></li>
+                            <li><a href="profile.html" id="profile" data-icon="custom" rel="external" data-ajax="false">Profile</a></li>
+                        </ul>
+                    </div><!-- /navbar -->
+                </div><!-- /footer -->
+                <script type="text/javascript">
+                    $("[data-role=header]").fixedtoolbar({ tapToggle: false });
+                    $("[data-role=footer]").fixedtoolbar({ tapToggle: false });
+                    </script>
+            </div><!-- /page popup -->
  </div> <!-- end of contentWrapper -->
 </div>	<!-- end of siteWrapper -->
 
