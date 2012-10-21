@@ -115,7 +115,7 @@ onDeviceReady: function() {
                                                result = xmlhttp.responseText;
                                                console.log(result);
                                                resultObj = eval('('+result+')');
-                                               window.location="productDetail.html?pid="+resultObj['ASIN'];
+                                               window.location.href="productDetail.html?pid="+resultObj['ASIN'];
                                                }
                                                };
                                                xmlhttp.send(params);
