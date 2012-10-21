@@ -646,8 +646,7 @@ function loadMoreBeautiesResult(numLoaded,uid){
 }
 
 function moreComment(prdId,multiplier,limit,divisor){
-	
-	var baseCounter = $('#product'+prdId+' .productCommentBox').children('.eachComment').length;
+	var baseCounter = $('#product .productCommentBox').children('.eachComment').length;
 	var counter = parseInt(baseCounter/divisor);
 	
 	var url="http://test.yourperfectbeauty.com/productController.php",
@@ -664,9 +663,9 @@ function moreComment(prdId,multiplier,limit,divisor){
 			size = getObjSize(resultObj);
 			
 			if(typeof resultObj[0] == "object")
-			{	var $this = $('#product'+prdId+' .productCommentBox');
-					$('#product'+prdId+' .moreComment').remove();
-					$this.show();
+			{	var $this = $('#product .productCommentBox');
+					$('#product .moreComment').remove();
+                $this.show();
 					for(i=0;i<(size-1);i++)
 					{
 						resultObj[i]['comment']=resultObj[i]['comment'].replace("\\r\\n","<br/>");
@@ -681,20 +680,20 @@ function moreComment(prdId,multiplier,limit,divisor){
 							html= "<div class='eachComment'><div class='commentIntLeft'><img src='"+pic+"' /></div><div class='commentIntRight bigComment'>"+resultObj[i]['comment']+"</div></div>";
 						else
 							html= "<div class='eachComment'><div class='commentIntLeft'><img src='"+pic+"' /></div><div class='commentIntRight' style='width:277px'>"+resultObj[i]['comment']+"</div></div>";
-						$(html).hide().appendTo('#product'+prdId+' .productCommentBox').slideDown(500);;
+						$(html).hide().appendTo('#product .productCommentBox').slideDown(500);;
 					
 					}
 					
 					if((i == size-1)&&resultObj[size-1])
 					{
-						html2 = "<div class='moreComment' id='moreComment"+prdId+"'>More Reviews</div>";
-						$('#product'+prdId+' .productCommentBox').append(html2);
+						html2 = "<div class='moreComment' id='moreComment"+prdId+"' style='float:left;text-align:left;'>More Reviews</div>";
+						$('#product .productCommentBox').append(html2);
 						$("#moreComment"+prdId).click(function() {
 							moreComment(prdId,multiplier,limit,divisor);
 						});
 					} else if((i == size-1)&&!resultObj[size-1]) {
 						html1 = "<div class='noMoreComment'>No More Reviews</div>";
-						$('#product'+prdId).append(html1);
+						$('#product').append(html1);
 
 					}
 			}
@@ -725,7 +724,7 @@ function loadMoreProduct(counter,imgPath,productImgPath,uid,whichType){
             $(".loader").hide();
 			size = getObjSize(resultObj);
 			if(size==0) {
-				$('#productsDisplayTab1').remove();
+				//$('#productsDisplayTab1').remove();
 				$('#productsDisplayTab2').click();
 			}
 			for(i=0;i<size;i++)
@@ -737,14 +736,14 @@ function loadMoreProduct(counter,imgPath,productImgPath,uid,whichType){
 				numRating = resultObj[i]['numRating'];
 				totalCommentSize = resultObj[i]['commentSize'];
 
-				html1 = "<div id='product"+pid+"' class='eachProduct'><div class='productRating'><ul class='starRatings'>";
+				html1 = "<div id='product"+pid+"' class='eachProduct'><div class='productRating'><ul class='starRatings' style='background-color:#444;padding-left:2px;padding-top:2px;'>";
 				html2 = "<li class='oneStar'><img src='"+imgPath+"/whiteStar.png'/></li>";
 				html3 = "<li class='twoStar'><img src='"+imgPath+"/whiteStar.png'/></li>";
 				html4 = "<li class='threeStar'><img src='"+imgPath+"/whiteStar.png'/></li>";
 				html5 = "<li class='fourStar'><img src='"+imgPath+"/whiteStar.png'/></li>";
 				html6 = "<li class='fiveStar'><img src='"+imgPath+"/whiteStar.png'/></li></ul>";
 				
-				html7 = "</div><div class='productImg'><a href='productDetail.html?pid="+pid+"'><img src='"+productImgPath+"/275"+product['image']+"' /></a></div>";
+				html7 = "</div><div class='productImg'><a href='productDetail.html?pid="+pid+"' rel='external' data-ajax='false'><img src='"+productImgPath+"/275"+product['image']+"' /></a></div>";
 				html8 = "<div class='productTitle'><a href='productDetail.html?pid="+pid+"'>"+product['name']+"</a></div><div class='productCommentBox'>";
                 
                 $('.productsContainer').append(html1+html2+html3+html4+html5+html6+html7+html8+"</div>");
