@@ -22,8 +22,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>Perfect Beauty</title>
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
@@ -36,6 +37,49 @@
             #camera .ui-icon { background:  url(img/86-camera.png) 50% 50% no-repeat;  background-size: 24px 18px; }
             #scanner .ui-icon { background:  url(img/195-barcode.png) 50% 50% no-repeat;  background-size: 24px 18px; }
             #profile .ui-icon { background:  url(img/111-user.png) 50% 50% no-repeat;  background-size: 24px 21px; }
+
+
+            ul#homeFeed > li{
+                border-radius: 10px;
+                border:1px solid #ccc;
+                margin-bottom: 20px;
+                overflow:hidden;
+                box-shadow: 0px 1px 5px #333;
+                font: 14px Helvetica,Arial;
+                text-transform: none;
+            }
+            ul#homeFeed img{
+                width: 100%;
+                height: auto;
+            }
+
+            .homeFeedName, .homeFeedStatus {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .homeFeedName {
+                color:#ccc;
+                font-weight: bold;
+                padding-top: 5px;
+            }
+            .homeFeedStatus {
+                margin-bottom: 10px;
+                font-size: 16px
+            }
+            .homeFeedComments {
+                background-color: #ccc;
+                padding: 5px 10px;
+            }
+
+            .homeFeedComments a {
+                text-decoration: none;
+                display: block;
+
+            }
+
+            .complement {
+
+            }
         </style>
     </head>
     <body>
@@ -44,27 +88,52 @@
 
             <div data-role="header" data-position="fixed">
                 <h1>Home</h1>
-                <a href="#write" data-icon="plus" data-transition="slidedown" class="ui-btn-right">Write</a>
+                <a href="#write" data-icon="plus" data-transition="slide" class="ui-btn-right">Write</a>
             </div><!-- /header -->
 
             <div data-role="content" >  
-                <div style="
-                    position: absolute;
-                    left: 31px;
-                    top: 28px;
-                    font-size: 30px;
-                    "><a href="products.html">Products Page</a><br/>
-                    <a href="scan.html">Scanning Page</a>
-                </div>
-            </div><!-- /content -->
+                <ul id="homeFeed">
+                    <li>
+                        <ul>
+                            <li class="picture"><img src="https://d11lxttoebl3uu.cloudfront.net/upload/upload/1799223057037/1799223057037_8ff73e161de1b006155e38e666791447quotes308.jpg" alt=""></li>
+                            <li class="homeFeedName">Lacey</li>
+                            <li class="homeFeedStatus">True</li>
+                            <li class="homeFeedComments">0 comments</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="picture"><img src="https://d11lxttoebl3uu.cloudfront.net/upload/upload/1606440346002/1606440346002_f0e1357252f09bb79d4f8599633dbf54534730_536349066381477_1875374613_n.jpg" alt=""></li>
+                            <li class="homeFeedName">Elaya</li>
+                            <li class="homeFeedStatus">I could not resist these! #Bargain #Ross #Heels #Brown #Booties</li>
+                            <li class="homeFeedComments">1 comments</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="homeFeedName">Elaya</li>
+                            <li class="homeFeedStatus">Heading to bed now. Early productive day tomorrow but I was browsing some videos and I want to know... What makeup brush set do you have/ want and why? I don't own a brush set yet and I want one but I don't know what to get.... Until next time, Goodnight Beauties!</li>
+                            <li class="homeFeedComments"><a href="#">3 comments<span class="compliment"></span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="homeFeedName">Lacey</li>
+                            <li class="homeFeedStatus">Hope everyone had a good day. nite loves</li>
+                            <li class="homeFeedComments">2 comments</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div><!-- /home -->
             
             <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
                 <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
                     <ul>
-                        <li><a href="#" id="home" data-icon="custom">Home</a></li>
-                        <li><a href="#" id="products" data-icon="custom">Products</a></li>
-                        <li><a href="#" id="camera" data-icon="custom">Camera</a></li>
-                        <li><a href="#" id="scanner" data-icon="custom">Scanner</a></li>
+                        <li><a href="index.html" id="home" data-icon="custom">Home</a></li>
+                        <li><a href="products.html" id="products" data-icon="custom">Products</a></li>
+                        <li><a href="" id="camera" data-icon="custom">Camera</a></li>
+                        <li><a href="scan.html" id="scanner" data-icon="custom">Scanner</a></li>
                         <li><a href="#" id="profile" data-icon="custom">Profile</a></li>
                     </ul>
                 </div><!-- /navbar -->
@@ -72,69 +141,58 @@
         </div><!-- /page one -->
 
 
-        <!-- Start of second page: #two -->
+        <!-- Start of second page: #write -->
         <div data-role="page" id="write">
 
             <div data-role="header" data-position="fixed">
-                <a href="#home" data-icon="back" data-transition="slideup" >Back</a>
+                <a href="#home" data-icon="back" data-transition="reverse slide" >Back</a>
                 <h1>Status update</h1>
             </div><!-- /header -->
 
-            <div data-role="content">    
-                <label for="textarea-a">Textarea:</label>
-                <textarea name="textarea" id="textarea-a">
-                Add a comment
-                </textarea>
-                <input type="submit" value="Submit Button" />
+            <div data-role="content">
+                <label for="textarea">Add your comment</label>
+                <textarea name="textarea" id="textarea-a" placeholder="Add your comment"></textarea>
+                <input type="submit" data-icon="check" value="Submit Button" />
                 
             </div><!-- /content -->
             
             <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
                 <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
                     <ul>
-                        <li><a href="#" id="home" data-icon="custom">Home</a></li>
-                        <li><a href="#" id="products" data-icon="custom">Products</a></li>
-                        <li><a href="#" id="camera" data-icon="custom">Camera</a></li>
-                        <li><a href="#" id="scanner" data-icon="custom">Scanner</a></li>
+                        <li><a href="index.html" id="home" data-icon="custom">Home</a></li>
+                        <li><a href="products.html" id="products" data-icon="custom">Products</a></li>
+                        <li><a href="" id="camera" data-icon="custom">Camera</a></li>
+                        <li><a href="scan.html" id="scanner" data-icon="custom">Scanner</a></li>
                         <li><a href="#" id="profile" data-icon="custom">Profile</a></li>
                     </ul>
                 </div><!-- /navbar -->
             </div><!-- /footer -->
-        </div><!-- /page two -->
+        </div><!-- /write -->
 
 
-        <!-- Start of third page: #popup -->
-        <div data-role="page" id="popup">
+        <!-- Start of third page: #view -->
+        <div data-role="page" id="view">
 
             <div data-role="header" data-position="fixed">
                 <h1>View Comment</h1>
             </div><!-- /header -->
 
             <div data-role="content">    
-                <label for="textarea-a">Textarea:</label>
-                <textarea name="textarea" id="textarea-a">
-                Add a comment
-                </textarea>
-                <input type="submit" value="Submit Button" />
+
             </div><!-- /content -->
             
             <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
                 <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
                     <ul>
-                        <li><a href="#" id="home" data-icon="custom">Home</a></li>
-                        <li><a href="#" id="products" data-icon="custom">Products</a></li>
-                        <li><a href="#" id="camera" data-icon="custom">Camera</a></li>
-                        <li><a href="#" id="scanner" data-icon="custom">Scanner</a></li>
+                        <li><a href="index.html" id="home" data-icon="custom">Home</a></li>
+                        <li><a href="products.html" id="products" data-icon="custom">Products</a></li>
+                        <li><a href="" id="camera" data-icon="custom">Camera</a></li>
+                        <li><a href="scan.html" id="scanner" data-icon="custom">Scanner</a></li>
                         <li><a href="#" id="profile" data-icon="custom">Profile</a></li>
                     </ul>
                 </div><!-- /navbar -->
             </div><!-- /footer -->
         </div><!-- /page popup -->
-
-
-        <div>
-
-        </div>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
