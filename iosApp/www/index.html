@@ -24,19 +24,117 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+        <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+        <script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+            <style> 
+            .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+            .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+            #home .ui-icon { background:  url(img/28-star.png) 50% 50% no-repeat; background-size: 26px 26px; }
+            #products .ui-icon { background:  url(img/80-shopping-cart.png) 50% 50% no-repeat; background-size: 26px 19px;  }
+            #camera .ui-icon { background:  url(img/86-camera.png) 50% 50% no-repeat;  background-size: 24px 18px; }
+            #scanner .ui-icon { background:  url(img/195-barcode.png) 50% 50% no-repeat;  background-size: 24px 18px; }
+            #profile .ui-icon { background:  url(img/111-user.png) 50% 50% no-repeat;  background-size: 24px 21px; }
+        </style>
     </head>
     <body>
+        <!-- Start of first page: #home -->
+        <div data-role="page" id="home">
+
+            <div data-role="header" data-position="fixed">
+                <h1>Home</h1>
+                <a href="#write" data-icon="plus" data-transition="slidedown" class="ui-btn-right">Write</a>
+            </div><!-- /header -->
+
+            <div data-role="content" >  
+                <div style="
+                    position: absolute;
+                    left: 31px;
+                    top: 28px;
+                    font-size: 30px;
+                    "><a href="products.html">Products Page</a><br/>
+                    <a href="scan.html">Scanning Page</a>
+                </div>
+            </div><!-- /content -->
+            
+            <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+                <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                    <ul>
+                        <li><a href="#" id="home" data-icon="custom">Home</a></li>
+                        <li><a href="#" id="products" data-icon="custom">Products</a></li>
+                        <li><a href="#" id="camera" data-icon="custom">Camera</a></li>
+                        <li><a href="#" id="scanner" data-icon="custom">Scanner</a></li>
+                        <li><a href="#" id="profile" data-icon="custom">Profile</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page one -->
+
+
+        <!-- Start of second page: #two -->
+        <div data-role="page" id="write">
+
+            <div data-role="header" data-position="fixed">
+                <a href="#home" data-icon="back" data-transition="slideup" >Back</a>
+                <h1>Status update</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">    
+                <label for="textarea-a">Textarea:</label>
+                <textarea name="textarea" id="textarea-a">
+                Add a comment
+                </textarea>
+                <input type="submit" value="Submit Button" />
+                
+            </div><!-- /content -->
+            
+            <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+                <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                    <ul>
+                        <li><a href="#" id="home" data-icon="custom">Home</a></li>
+                        <li><a href="#" id="products" data-icon="custom">Products</a></li>
+                        <li><a href="#" id="camera" data-icon="custom">Camera</a></li>
+                        <li><a href="#" id="scanner" data-icon="custom">Scanner</a></li>
+                        <li><a href="#" id="profile" data-icon="custom">Profile</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page two -->
+
+
+        <!-- Start of third page: #popup -->
+        <div data-role="page" id="popup">
+
+            <div data-role="header" data-position="fixed">
+                <h1>View Comment</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">    
+                <label for="textarea-a">Textarea:</label>
+                <textarea name="textarea" id="textarea-a">
+                Add a comment
+                </textarea>
+                <input type="submit" value="Submit Button" />
+            </div><!-- /content -->
+            
+            <div data-role="footer" data-position="fixed" class="nav-glyphish-example">
+                <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                    <ul>
+                        <li><a href="#" id="home" data-icon="custom">Home</a></li>
+                        <li><a href="#" id="products" data-icon="custom">Products</a></li>
+                        <li><a href="#" id="camera" data-icon="custom">Camera</a></li>
+                        <li><a href="#" id="scanner" data-icon="custom">Scanner</a></li>
+                        <li><a href="#" id="profile" data-icon="custom">Profile</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page popup -->
+
+
         <div>
-            <div style="
-                position: absolute;
-                left: 31px;
-                top: 28px;
-                font-size: 30px;
-                "><a href="products.html">Products Page</a><br/>
-                <a href="scan.html">Scanning Page</a>
-            </div>
+
         </div>
-        <script type="text/javascript" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
